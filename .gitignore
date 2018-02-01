@@ -286,3 +286,10 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/imbWBI.IndustryTermModel/resources/lexical/apertium_hbs
+/imbWBI.IndustryTermModel/resources/lexical/multext/srLex_v1.2.mtx
+/imbWBI.IndustryTermModel/resources/lexical/unitex
+/imbWBI.IndustryTermModel/resources/entities/Copy of klasifikacija KD08 puni nazivi.xlsx
+/imbWBI.IndustryTermModel/resources/entities/NACE Rev_ 2 table format2.xlsx
+/imbWBI.IndustryTermModel/resources/datapoints/countries
+/imbWBI.Documentation

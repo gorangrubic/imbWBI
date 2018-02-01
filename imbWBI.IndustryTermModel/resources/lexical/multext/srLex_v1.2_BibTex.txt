@@ -1,0 +1,7 @@
+﻿ @misc{11356/1073,
+ title = {Inflectional lexicon {srLex} 1.2},
+ author = {Ljube{\v s}i{\'c}, Nikola and Klubi{\v c}ka, Filip and Boras, Damir},
+ url = {http://hdl.handle.net/11356/1073},
+ note = {Slovenian language resource repository {CLARIN}.{SI}},
+ copyright = {{GNU} General Public Licence, version 3},
+ year = {2016} }

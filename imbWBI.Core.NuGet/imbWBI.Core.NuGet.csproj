@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEA3D3AD-56C4-4811-806B-DE563E248138}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>imbWBI.Core.NuGet</RootNamespace>
+    <AssemblyName>imbWBI.Core.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\LocalNuGet\imbWBI.Core.NuGet\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\imbWBI.Core.NuGet.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\LocalNuGet\imbWBI.Core.NuGet\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\LocalNuGet\imbWBI.Core.NuGet\imbWBI.Core.NuGet.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>imbWBI.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\VersionInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="NuGetPack.config" />
+    <None Include="packages.config" />
+    <None Include="internalPackages.config" />
+    <None Include="NuGetPack.Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\imbWBI.Core\imbWBI.Core.csproj">
+      <Project>{9a9228cb-af89-4fba-93b9-d9731fc8472a}</Project>
+      <Name>imbWBI.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\imbWBI.IndustryTermModel\imbWBI.IndustryTermModel.csproj">
+      <Project>{a919149c-5e3f-468d-bf8a-5935fca586a9}</Project>
+      <Name>imbWBI.IndustryTermModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.8.0\lib\net40\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\net40\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math.Core, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\net40\Accord.Math.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Statistics.3.8.0\lib\net40\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bdev.Net.Dns, Version=1.0.4.0, Culture=neutral, PublicKeyToken=217d47f649bccd2c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bdev.Net.Dns.1.0.4\lib\Bdev.Net.Dns.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.2.16.3.0\lib\net40\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.6.5.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.5\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="imbACE.Core, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbACE.0.1.2.11\lib\net40\imbACE.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="imbACE.Network, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbACE.0.1.2.11\lib\net40\imbACE.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="imbACE.Services, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbACE.0.1.2.11\lib\net40\imbACE.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="imbCommonModels, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbWEM.CommonData.0.1.2.16\lib\net40\imbCommonModels.dll</HintPath>
+    </Reference>
+    <Reference Include="imbMiningContext, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbWEM.CommonData.0.1.2.16\lib\net40\imbMiningContext.dll</HintPath>
+    </Reference>
+    <Reference Include="imbNLP.PartOfSpeech, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbNLP.PartOfSpeech.0.1.2.7\lib\net40\imbNLP.PartOfSpeech.dll</HintPath>
+    </Reference>
+    <Reference Include="imbNLP.Transliteration, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbNLP.Transliteration.0.1.2.1\lib\net40\imbNLP.Transliteration.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.Core, Version=0.1.6606.9348, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.0.1.2.27\lib\net40\imbSCI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.Data, Version=0.1.6603.21536, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.0.1.2.27\lib\net40\imbSCI.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.DataComplex, Version=0.1.6606.9349, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.0.1.2.27\lib\net40\imbSCI.DataComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.Graph, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.Graph.0.1.0.7\lib\net40\imbSCI.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.Reporting, Version=0.1.6606.9350, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.0.1.2.27\lib\net40\imbSCI.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqStatistics, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqStatistics.2.1.0\lib\net40\LinqStatistics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.20.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.20.2\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Spatial, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Spatial.0.4.0\lib\net40\MathNet.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.10\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PGK.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f93e897f802ddcb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\PGK.Extensions.2011.6\lib\PGK.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imbWBI.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(SolutionDir).NuGetPack\NuGetPack.exe" "$(ProjectPath)" "$(TargetPath)" $(ConfigurationName)</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ GNU GENERAL PUBLIC LICENSE V3.0
+ Copyright (C) 2018 imbVeles - http://blog.veles.rs/
+ Goran Grubić - Email: hardy@veles.rs - http://orcid.org/0000-0003-2673-9471
+ http://github.com/gorangrubic - http://www.mendeley.com/profiles/goran-grubi2/
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+-->
+<DataTable>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="countryTable" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="countryTable" msprop:shema_classname="imbCountryInfoEntry" msprop:categoryPriority="System.Collections.Generic.List`1[System.String]" msprop:shema_sourceinstance="imbACE.Network.tools.imbCountryInfoEntry">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="tldList" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String tldList" msprop:col_group="" msprop:measure_important="none" msprop:measure_displayGroup="" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="tldList" msprop:col_type="System.String" msprop:col_caption="tldList" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+                <xs:element name="countryCode" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String countryCode" msprop:col_group="" msprop:measure_important="none" msprop:measure_displayGroup="" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="countryCode" msprop:col_type="System.String" msprop:col_caption="countryCode" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+                <xs:element name="countryName" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String countryName" msprop:col_group="" msprop:measure_important="none" msprop:measure_displayGroup="" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="countryName" msprop:col_type="System.String" msprop:col_caption="countryName" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//countryTable" />
+        <xs:field xpath="countryName" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <DocumentElement>
+      <countryTable diffgr:id="countryTable1" msdata:rowOrder="0">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>de</countryCode>
+        <countryName>Germany</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable2" msdata:rowOrder="1">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>uk</countryCode>
+        <countryName>United Kingdom</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable3" msdata:rowOrder="2">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>at</countryCode>
+        <countryName>Austria</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable4" msdata:rowOrder="3">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tv</countryCode>
+        <countryName>Tuvalu</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable5" msdata:rowOrder="4">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ch</countryCode>
+        <countryName>Switzerland</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable6" msdata:rowOrder="5">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>nl</countryCode>
+        <countryName>Netherlands</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable7" msdata:rowOrder="6">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>us</countryCode>
+        <countryName>United States</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable8" msdata:rowOrder="7">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ws</countryCode>
+        <countryName>Samoa</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable9" msdata:rowOrder="8">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>it</countryCode>
+        <countryName>Italy</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable10" msdata:rowOrder="9">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ru</countryCode>
+        <countryName>Russian Federation</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable11" msdata:rowOrder="10">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>be</countryCode>
+        <countryName>Belgium</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable12" msdata:rowOrder="11">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>pl</countryCode>
+        <countryName>Poland</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable13" msdata:rowOrder="12">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>br</countryCode>
+        <countryName>Brazil</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable14" msdata:rowOrder="13">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>cc</countryCode>
+        <countryName>Cocos (Keeling) Islands</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable15" msdata:rowOrder="14">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>to</countryCode>
+        <countryName>Tonga</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable16" msdata:rowOrder="15">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tk</countryCode>
+        <countryName>Tokelau</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable17" msdata:rowOrder="16">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ag</countryCode>
+        <countryName>Antigua and Barbuda</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable18" msdata:rowOrder="17">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>se</countryCode>
+        <countryName>Sweden</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable19" msdata:rowOrder="18">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>fr</countryCode>
+        <countryName>France</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable20" msdata:rowOrder="19">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>dk</countryCode>
+        <countryName>Denmark</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable21" msdata:rowOrder="20">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ro</countryCode>
+        <countryName>Romania</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable22" msdata:rowOrder="21">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>cz</countryCode>
+        <countryName>Czech Republic</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable23" msdata:rowOrder="22">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ac</countryCode>
+        <countryName>Ascension Island</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable24" msdata:rowOrder="23">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ms</countryCode>
+        <countryName>Montserrat</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable25" msdata:rowOrder="24">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tf</countryCode>
+        <countryName>French Southern Territories</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable26" msdata:rowOrder="25">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tc</countryCode>
+        <countryName>Turks and Caicos Islands</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable27" msdata:rowOrder="26">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>gs</countryCode>
+        <countryName>South Georgia and the South Sandwich Islands</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable28" msdata:rowOrder="27">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>vg</countryCode>
+        <countryName>Virgin Islands, British</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable29" msdata:rowOrder="28">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>li</countryCode>
+        <countryName>Liechtenstein</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable30" msdata:rowOrder="29">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>am</countryCode>
+        <countryName>Armenia</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable31" msdata:rowOrder="30">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>gr</countryCode>
+        <countryName>Greece</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable32" msdata:rowOrder="31">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>pt</countryCode>
+        <countryName>Portugal</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable33" msdata:rowOrder="32">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>sk</countryCode>
+        <countryName>Slovak Republic</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable34" msdata:rowOrder="33">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>by</countryCode>
+        <countryName>Belarus</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable35" msdata:rowOrder="34">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>lv</countryCode>
+        <countryName>Latvia</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable36" msdata:rowOrder="35">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>lt</countryCode>
+        <countryName>Lithuania</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable37" msdata:rowOrder="36">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ad</countryCode>
+        <countryName>Andorra</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable38" msdata:rowOrder="37">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>fo</countryCode>
+        <countryName>Faroe Islands</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable39" msdata:rowOrder="38">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ca</countryCode>
+        <countryName>Canada</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable40" msdata:rowOrder="39">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>mx</countryCode>
+        <countryName>Mexico</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable41" msdata:rowOrder="40">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>cn</countryCode>
+        <countryName>China</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable42" msdata:rowOrder="41">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>lu</countryCode>
+        <countryName>Luxembourg</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable43" msdata:rowOrder="42">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>cx</countryCode>
+        <countryName>Christmas Island</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable44" msdata:rowOrder="43">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>jp</countryCode>
+        <countryName>Japan</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable45" msdata:rowOrder="44">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>nu</countryCode>
+        <countryName>Niue</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable46" msdata:rowOrder="45">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>si</countryCode>
+        <countryName>Slovenia</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable47" msdata:rowOrder="46">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>au</countryCode>
+        <countryName>Australia</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable48" msdata:rowOrder="47">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>st</countryCode>
+        <countryName>Sao Tome and Principe</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable49" msdata:rowOrder="48">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ua</countryCode>
+        <countryName>Ukraine</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable50" msdata:rowOrder="49">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ie</countryCode>
+        <countryName>Ireland</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable51" msdata:rowOrder="50">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>no</countryCode>
+        <countryName>Norway</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable52" msdata:rowOrder="51">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>as</countryCode>
+        <countryName>American Samoa</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable53" msdata:rowOrder="52">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>il</countryCode>
+        <countryName>Israel</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable54" msdata:rowOrder="53">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>bz</countryCode>
+        <countryName>Belize</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable55" msdata:rowOrder="54">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>cl</countryCode>
+        <countryName>Chile</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable56" msdata:rowOrder="55">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>kr</countryCode>
+        <countryName>Korea, Republic of</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable57" msdata:rowOrder="56">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>is</countryCode>
+        <countryName>Iceland</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable58" msdata:rowOrder="57">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>af</countryCode>
+        <countryName>Afghanistan</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable59" msdata:rowOrder="58">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>sh</countryCode>
+        <countryName>Saint Helena</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable60" msdata:rowOrder="59">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>sg</countryCode>
+        <countryName>Singapore</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable61" msdata:rowOrder="60">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tm</countryCode>
+        <countryName>Turkmenistan</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable62" msdata:rowOrder="61">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>bj</countryCode>
+        <countryName>Benin</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable63" msdata:rowOrder="62">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>cd</countryCode>
+        <countryName>Congo, The Democratic Republic of the</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable64" msdata:rowOrder="63">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ci</countryCode>
+        <countryName>Cote d\Ivoire</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable65" msdata:rowOrder="64">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ee</countryCode>
+        <countryName>Estonia</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable66" msdata:rowOrder="65">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>eu</countryCode>
+        <countryName>European Union</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable67" msdata:rowOrder="66">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>fi</countryCode>
+        <countryName>Finland</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable68" msdata:rowOrder="67">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>gf</countryCode>
+        <countryName>French Guiana</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable69" msdata:rowOrder="68">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>gg</countryCode>
+        <countryName>Guernsey</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable70" msdata:rowOrder="69">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>je</countryCode>
+        <countryName>Jersey</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable71" msdata:rowOrder="70">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>hk</countryCode>
+        <countryName>Hong Kong</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable72" msdata:rowOrder="71">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>hn</countryCode>
+        <countryName>Honduras</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable73" msdata:rowOrder="72">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>sc</countryCode>
+        <countryName>Seychelles</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable74" msdata:rowOrder="73">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>vc</countryCode>
+        <countryName>Saint Vincent and the Grenadines</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable75" msdata:rowOrder="74">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>hu</countryCode>
+        <countryName>Hungary</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable76" msdata:rowOrder="75">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>in</countryCode>
+        <countryName>India</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable77" msdata:rowOrder="76">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>io</countryCode>
+        <countryName>British Indian Ocean Territory</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable78" msdata:rowOrder="77">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ke</countryCode>
+        <countryName>Kenya</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable79" msdata:rowOrder="78">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>kz</countryCode>
+        <countryName>Kazakhstan</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable80" msdata:rowOrder="79">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>mg</countryCode>
+        <countryName>Madagascar</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable81" msdata:rowOrder="80">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>mn</countryCode>
+        <countryName>Mongolia</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable82" msdata:rowOrder="81">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>my</countryCode>
+        <countryName>Malaysia</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable83" msdata:rowOrder="82">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>na</countryCode>
+        <countryName>Namibia</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable84" msdata:rowOrder="83">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>nz</countryCode>
+        <countryName>New Zealand</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable85" msdata:rowOrder="84">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>pm</countryCode>
+        <countryName>Saint Pierre and Miquelon</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable86" msdata:rowOrder="85">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>pr</countryCode>
+        <countryName>Puerto Rico</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable87" msdata:rowOrder="86">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>re</countryCode>
+        <countryName>Reunion Island</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable88" msdata:rowOrder="87">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tj</countryCode>
+        <countryName>Tajikistan</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable89" msdata:rowOrder="88">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tl</countryCode>
+        <countryName>Timor-Leste</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable90" msdata:rowOrder="89">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tr</countryCode>
+        <countryName>Turkey</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable91" msdata:rowOrder="90">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>tw</countryCode>
+        <countryName>Taiwan</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable92" msdata:rowOrder="91">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ug</countryCode>
+        <countryName>Uganda</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable93" msdata:rowOrder="92">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>uz</countryCode>
+        <countryName>Uzbekistan</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable94" msdata:rowOrder="93">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ve</countryCode>
+        <countryName>Venezuela</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable95" msdata:rowOrder="94">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>wf</countryCode>
+        <countryName>Wallis and Futuna Islands</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable96" msdata:rowOrder="95">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>yt</countryCode>
+        <countryName>Mayotte</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable97" msdata:rowOrder="96">
+        <tldList>System.Byte[]</tldList>
+        <countryCode>ci</countryCode>
+        <countryName>Cote dIvoire</countryName>
+      </countryTable>
+      <countryTable diffgr:id="countryTable98" msdata:rowOrder="97">
+        <tldList />
+        <countryCode>rs</countryCode>
+        <countryName>Serbia</countryName>
+      </countryTable>
+    </DocumentElement>
+  </diffgr:diffgram>
+</DataTable>

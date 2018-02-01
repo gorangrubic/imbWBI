@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ GNU GENERAL PUBLIC LICENSE V3.0
+ Copyright (C) 2018 imbVeles - http://blog.veles.rs/
+ Goran Grubić - Email: hardy@veles.rs - http://orcid.org/0000-0003-2673-9471
+ http://github.com/gorangrubic - http://www.mendeley.com/profiles/goran-grubi2/
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+-->
+<DataTable>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="whoIsServerTable" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="whoIsServerTable" msprop:shema_classname="imbWhoIsServer" msprop:categoryPriority="System.Collections.Generic.List`1[System.String]" msprop:shema_sourceinstance="imbACE.Network.tools.imbWhoIsServer">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="url" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String url" msprop:col_group="IMBWHOISSERVER" msprop:measure_important="none" msprop:measure_displayGroup="IMBWHOISSERVER" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="Adresa WHO is Servera" msprop:col_type="System.String" msprop:col_caption="url" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" />
+                <xs:element name="info" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String info" msprop:col_group="IMBWHOISSERVER" msprop:measure_important="none" msprop:measure_displayGroup="IMBWHOISSERVER" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="Opis servera" msprop:col_type="System.String" msprop:col_caption="info" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+                <xs:element name="mainDomainList" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String mainDomainList" msprop:col_group="IMBWHOISSERVER" msprop:measure_important="none" msprop:measure_displayGroup="IMBWHOISSERVER" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="Lista glavnih domena koje pokriva" msprop:col_type="System.String" msprop:col_caption="mainDomainList" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+                <xs:element name="subDomainList" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String subDomainList" msprop:col_group="IMBWHOISSERVER" msprop:measure_important="none" msprop:measure_displayGroup="IMBWHOISSERVER" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="lista pod domena" msprop:col_type="System.String" msprop:col_caption="subDomainList" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//whoIsServerTable" />
+        <xs:field xpath="url" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <DocumentElement>
+      <whoIsServerTable diffgr:id="whoIsServerTable1" msdata:rowOrder="0">
+        <url>whois.denic.de</url>
+        <info>testss</info>
+        <mainDomainList>de, </mainDomainList>
+        <subDomainList>de, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable2" msdata:rowOrder="1">
+        <url>whois.nic.de</url>
+        <info>DEutsches Network Information Center</info>
+        <mainDomainList>de, </mainDomainList>
+        <subDomainList>de, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable3" msdata:rowOrder="2">
+        <url>whois.nic.uk</url>
+        <info>Nominet UK (.UK Domain Registrar)</info>
+        <mainDomainList>uk, </mainDomainList>
+        <subDomainList>uk, co.uk, org.uk, me.uk, ac.uk, ltd.uk, plc.uk, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable4" msdata:rowOrder="3">
+        <url>whois.verisign-grs.com</url>
+        <info />
+        <mainDomainList>com, net, </mainDomainList>
+        <subDomainList>com, eu.com, uk.com, us.com, gb.com, hu.com, br.com, cn.com, no.com, qc.com, sa.com, se.com, uy.com, za.com, net, uk.net, se.net, gb.net, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable5" msdata:rowOrder="4">
+        <url>whois.crsnic.net</url>
+        <info>Network Solutions, Inc. for Shared Registration System</info>
+        <mainDomainList>com, net, </mainDomainList>
+        <subDomainList>com, eu.com, uk.com, us.com, gb.com, hu.com, br.com, cn.com, no.com, qc.com, sa.com, se.com, uy.com, za.com, net, uk.net, se.net, gb.net, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable6" msdata:rowOrder="5">
+        <url>whois.biz</url>
+        <info />
+        <mainDomainList>biz, </mainDomainList>
+        <subDomainList>biz, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable7" msdata:rowOrder="6">
+        <url>whois.nic.biz</url>
+        <info />
+        <mainDomainList>biz, </mainDomainList>
+        <subDomainList>biz, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable8" msdata:rowOrder="7">
+        <url>whois.afilias.net</url>
+        <info />
+        <mainDomainList>info, </mainDomainList>
+        <subDomainList>info, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable9" msdata:rowOrder="8">
+        <url>whois.publicinterestregistry.net</url>
+        <info />
+        <mainDomainList>org, </mainDomainList>
+        <subDomainList>org, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable10" msdata:rowOrder="9">
+        <url>whois.pir.org</url>
+        <info />
+        <mainDomainList>org, </mainDomainList>
+        <subDomainList>org, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable11" msdata:rowOrder="10">
+        <url>whois.nic.at</url>
+        <info />
+        <mainDomainList>at, </mainDomainList>
+        <subDomainList>at, co.at, ac.at, gv.at, or.at, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable12" msdata:rowOrder="11">
+        <url>whois.www.tv</url>
+        <info />
+        <mainDomainList>tv, </mainDomainList>
+        <subDomainList>tv, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable13" msdata:rowOrder="12">
+        <url>whois.nic.ch</url>
+        <info>SWITCH Swiss Academic and Research Network</info>
+        <mainDomainList>ch, </mainDomainList>
+        <subDomainList>ch, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable14" msdata:rowOrder="13">
+        <url>whois.domain-registry.nl</url>
+        <info />
+        <mainDomainList>nl, </mainDomainList>
+        <subDomainList>nl, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable15" msdata:rowOrder="14">
+        <url>whois.nic.us</url>
+        <info />
+        <mainDomainList>us, </mainDomainList>
+        <subDomainList>us, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable16" msdata:rowOrder="15">
+        <url>whois.nic.ws</url>
+        <info />
+        <mainDomainList>ws, </mainDomainList>
+        <subDomainList>ws, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable17" msdata:rowOrder="16">
+        <url>whois.nic.it</url>
+        <info>Italian Network Information Center</info>
+        <mainDomainList>it, </mainDomainList>
+        <subDomainList>it, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable18" msdata:rowOrder="17">
+        <url>whois.ripn.net</url>
+        <info>Russian Institute for Public Networks</info>
+        <mainDomainList>ru, </mainDomainList>
+        <subDomainList>ru, com.ru, net.ru, org.ru, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable19" msdata:rowOrder="18">
+        <url>whois.dns.be</url>
+        <info />
+        <mainDomainList>be, </mainDomainList>
+        <subDomainList>be, ac.be, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable20" msdata:rowOrder="19">
+        <url>whois.dns.pl</url>
+        <info />
+        <mainDomainList>pl, </mainDomainList>
+        <subDomainList>pl, net.pl, com.pl, travel.pl, org.pl, biz.pl, info.pl, agro.pl, edu.pl, mail.pl, targi.pl, aid.pl, atm.pl, auto.pl, gmina.pl, gsm.pl, miasta.pl, media.pl, mil.pl, nom.pl, pc.pl, priv.pl, realestate.pl, rel.pl, shop.pl, sklep.pl, sos.pl, tm.pl, tourism.pl, turystyka.pl, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable21" msdata:rowOrder="20">
+        <url>whois.nic.br</url>
+        <info />
+        <mainDomainList>br, </mainDomainList>
+        <subDomainList>br, com.br, adv.br, org.br, inf.br, arq.br, eng.br, fm.br, fot.br, gov.br, pro.br, slg.br, tv.br, adm.br, am.br, art.br, bio.br, cng.br, cnt.br, ecn.br, esp.br, etc.br, eti.br, fst.br, g12.br, ind.br, jor.br, lel.br, med.br, mil.br, net.br, nom.br, ntr.br, odo.br, ppg.br, psc.br, psi.br, rec.br, tmp.br, tur.br, vet.br, zlg.br, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable22" msdata:rowOrder="21">
+        <url>whois.nic.name</url>
+        <info />
+        <mainDomainList>name, </mainDomainList>
+        <subDomainList>name, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable23" msdata:rowOrder="22">
+        <url>whois.nic.cc</url>
+        <info>NIC.CC Registration Services</info>
+        <mainDomainList>cc, </mainDomainList>
+        <subDomainList>cc, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable24" msdata:rowOrder="23">
+        <url>monarch.tonic.to</url>
+        <info />
+        <mainDomainList>to, </mainDomainList>
+        <subDomainList>to, </subDomainList>
+      </whoIsServerTable>
+      <whoIsServerTable diffgr:id="whoIsServerTable25" msdata:rowOrder="24">
+        <url>whois.dot.tk</url>
+        <info />
+        <mainDomainList>tk, </mainDomainList>
+        <subDomainList>tk, </subDomainList>
+      </whoIsServerTable>
+    </DocumentElement>
+  </diffgr:diffgram>
+</DataTable>

@@ -1,0 +1,31 @@
+﻿// This is auto-generated script to build MC Repository for Industry Term Model Project
+// Date {{{date}}}
+
+// Defining job
+{{{wem}}}.Job "MCRepo for {{{component}}}";"Building MCRepo for ITMP {{{project_name}}}";true;"";1;
+
+// Loading web domains
+{{{wem}}}.SampleFile "{{{sample_file}}}",false,"Domains of {{{component}}}",true,0,-1,{{{debug}}};
+
+// Creates new instance of built-in crawler
+{{{wem}}}.Crawler classname="{{{crawler}}}";LT_t={{{LT_t}}};I_max={{{I_max}}};PL_max={{{PL_max}}};PS_c={{{PS_c}}};instanceNameSufix="_MC";primLanguage="{{{pLanguage}}}";secLanguage="{{{sLanguage}}}";
+
+// Configuring Crawl Job Engine 
+{{{wem}}}.CrawlJobEngineSettings TC_max={{{TC_max}}};Tdl_max={{{Tdl_max}}};Tll_max={{{Tll_max}}};Tcjl_max={{{Tcjl_max}}};
+
+// Opens new session with the Index Engine
+{{{wem}}}.OpenSession experimentSession="{{{sessionID}}}";IndexID="{{{indexID}}}";useJobSettings=false;crawlFolderNameTemplate="*";
+
+// Opens new session with the Mining Context manager
+{{{mcm}}}.Open repo="{{{repo_name}}}"; log_msg="MCRepo construction for {{{component}}}"; debug={{{debug}}};
+
+// Adds plugin 
+{{{wem}}}.plugin plugin_classname="reportPlugIn_CrawlToMC";
+
+// Runs the crawl job
+{{{wem}}}.Run;
+
+// Closes the currently opened Mining Context session
+{{{mcm}}}.Close log_msg="Ending MCRepo construction for {{{component}}}"; doReport=true; debug={{{debug}}};
+
+

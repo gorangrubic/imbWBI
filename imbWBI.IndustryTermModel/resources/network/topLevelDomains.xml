@@ -1,0 +1,3224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ GNU GENERAL PUBLIC LICENSE V3.0
+ Copyright (C) 2018 imbVeles - http://blog.veles.rs/
+ Goran Grubić - Email: hardy@veles.rs - http://orcid.org/0000-0003-2673-9471
+ http://github.com/gorangrubic - http://www.mendeley.com/profiles/goran-grubi2/
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+-->
+<DataTable>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="topLevelDomains" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="topLevelDomains" msprop:shema_classname="imbTopLevelDomain" msprop:categoryPriority="System.Collections.Generic.List`1[System.String]" msprop:shema_sourceinstance="imbACE.Network.tools.imbTopLevelDomain">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="countryCode" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String countryCode" msprop:col_group="IMBTOPLEVELDOMAIN" msprop:measure_important="none" msprop:measure_displayGroup="IMBTOPLEVELDOMAIN" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="dvoslovna oznaka zemlje" msprop:col_type="System.String" msprop:col_caption="countryCode" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+                <xs:element name="domainName" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String domainName" msprop:col_group="IMBTOPLEVELDOMAIN" msprop:measure_important="none" msprop:measure_displayGroup="IMBTOPLEVELDOMAIN" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="Ime domena" msprop:col_type="System.String" msprop:col_caption="domainName" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" />
+                <xs:element name="count" msprop:reporting_valueformat="" msprop:col_propertyInfo="Int32 count" msprop:col_group="IMBTOPLEVELDOMAIN" msprop:measure_important="none" msprop:measure_displayGroup="IMBTOPLEVELDOMAIN" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="Broj domena na serveru" msprop:col_type="System.Int32" msprop:col_caption="count" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="Int32" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:int" minOccurs="0" />
+                <xs:element name="nic" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String nic" msprop:col_group="IMBTOPLEVELDOMAIN" msprop:measure_important="none" msprop:measure_displayGroup="IMBTOPLEVELDOMAIN" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="Adresa NIC-a" msprop:col_type="System.String" msprop:col_caption="nic" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+                <xs:element name="countryName" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String countryName" msprop:col_group="IMBTOPLEVELDOMAIN" msprop:measure_important="none" msprop:measure_displayGroup="IMBTOPLEVELDOMAIN" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="Naziv drzave na engleskom" msprop:col_type="System.String" msprop:col_caption="countryName" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+                <xs:element name="doPreload" msprop:reporting_valueformat="" msprop:col_propertyInfo="Boolean doPreload" msprop:col_group="IMBTOPLEVELDOMAIN" msprop:measure_important="none" msprop:measure_displayGroup="IMBTOPLEVELDOMAIN" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="Da li da unapred ucita ovaj TLD" msprop:col_type="System.Boolean" msprop:col_caption="doPreload" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="Boolean" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:boolean" minOccurs="0" />
+                <xs:element name="subDomainList" msprop:reporting_valueformat="" msprop:col_propertyInfo="System.String subDomainList" msprop:col_group="IMBTOPLEVELDOMAIN" msprop:measure_important="none" msprop:measure_displayGroup="IMBTOPLEVELDOMAIN" msprop:columnWidth="20" msprop:col_hasLinks="False" msprop:col_desc="List obuhvacenih pod domena" msprop:col_type="System.String" msprop:col_caption="subDomainList" msprop:col_hasTemplate="False" msprop:data_aggregation_type="imbSCI.Core.math.aggregation.dataPointAggregationDefinition" msprop:shema_classname="String" msprop:col_unit="" msprop:col_letter="" msprop:col_spe="imbSCI.Core.data.settingsPropertyEntryWithContext" msprop:col_pe="" msprop:col_priority="100" msprop:col_format="" msprop:col_importance="none" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//topLevelDomains" />
+        <xs:field xpath="domainName" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <DocumentElement>
+      <topLevelDomains diffgr:id="topLevelDomains1" msdata:rowOrder="0">
+        <countryCode>de</countryCode>
+        <domainName>de</domainName>
+        <count>1072609</count>
+        <nic>http://www.denic.de/</nic>
+        <countryName>Germany</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains2" msdata:rowOrder="1">
+        <countryCode>uk</countryCode>
+        <domainName>uk</domainName>
+        <count>101</count>
+        <nic>http://www.nic.uk/</nic>
+        <countryName>United Kingdom</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>co.uk, org.uk, me.uk, ac.uk, ltd.uk, plc.uk, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains3" msdata:rowOrder="2">
+        <countryCode>uk</countryCode>
+        <domainName>co.uk</domainName>
+        <count>70707</count>
+        <nic />
+        <countryName>United Kingdom</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains4" msdata:rowOrder="3">
+        <countryCode>uk</countryCode>
+        <domainName>org.uk</domainName>
+        <count>3224</count>
+        <nic />
+        <countryName>United Kingdom</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains5" msdata:rowOrder="4">
+        <countryCode>uk</countryCode>
+        <domainName>me.uk</domainName>
+        <count>257</count>
+        <nic />
+        <countryName>United Kingdom</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains6" msdata:rowOrder="5">
+        <countryCode>uk</countryCode>
+        <domainName>ac.uk</domainName>
+        <count>3</count>
+        <nic />
+        <countryName>United Kingdom</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains7" msdata:rowOrder="6">
+        <countryCode>uk</countryCode>
+        <domainName>ltd.uk</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>United Kingdom</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains8" msdata:rowOrder="7">
+        <countryCode>uk</countryCode>
+        <domainName>plc.uk</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>United Kingdom</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains9" msdata:rowOrder="8">
+        <countryCode>com</countryCode>
+        <domainName>com</domainName>
+        <count>49226</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList>eu.com, uk.com, us.com, gb.com, hu.com, br.com, cn.com, no.com, qc.com, sa.com, se.com, uy.com, za.com, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains10" msdata:rowOrder="9">
+        <countryCode>com</countryCode>
+        <domainName>eu.com</domainName>
+        <count>54</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains11" msdata:rowOrder="10">
+        <countryCode>com</countryCode>
+        <domainName>uk.com</domainName>
+        <count>8</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains12" msdata:rowOrder="11">
+        <countryCode>com</countryCode>
+        <domainName>us.com</domainName>
+        <count>3</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains13" msdata:rowOrder="12">
+        <countryCode>com</countryCode>
+        <domainName>gb.com</domainName>
+        <count>3</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains14" msdata:rowOrder="13">
+        <countryCode>com</countryCode>
+        <domainName>hu.com</domainName>
+        <count>1</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains15" msdata:rowOrder="14">
+        <countryCode>com</countryCode>
+        <domainName>br.com</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains16" msdata:rowOrder="15">
+        <countryCode>com</countryCode>
+        <domainName>cn.com</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains17" msdata:rowOrder="16">
+        <countryCode>com</countryCode>
+        <domainName>no.com</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains18" msdata:rowOrder="17">
+        <countryCode>com</countryCode>
+        <domainName>qc.com</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains19" msdata:rowOrder="18">
+        <countryCode>com</countryCode>
+        <domainName>sa.com</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains20" msdata:rowOrder="19">
+        <countryCode>com</countryCode>
+        <domainName>se.com</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains21" msdata:rowOrder="20">
+        <countryCode>com</countryCode>
+        <domainName>uy.com</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains22" msdata:rowOrder="21">
+        <countryCode>com</countryCode>
+        <domainName>za.com</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains23" msdata:rowOrder="22">
+        <countryCode>net</countryCode>
+        <domainName>net</domainName>
+        <count>11798</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList>uk.net, se.net, gb.net, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains24" msdata:rowOrder="23">
+        <countryCode>net</countryCode>
+        <domainName>uk.net</domainName>
+        <count>4</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains25" msdata:rowOrder="24">
+        <countryCode>net</countryCode>
+        <domainName>se.net</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains26" msdata:rowOrder="25">
+        <countryCode>net</countryCode>
+        <domainName>gb.net</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains27" msdata:rowOrder="26">
+        <countryCode>biz</countryCode>
+        <domainName>biz</domainName>
+        <count>19248</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains28" msdata:rowOrder="27">
+        <countryCode>info</countryCode>
+        <domainName>info</domainName>
+        <count>6618</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains29" msdata:rowOrder="28">
+        <countryCode>org</countryCode>
+        <domainName>org</domainName>
+        <count>6494</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains30" msdata:rowOrder="29">
+        <countryCode>at</countryCode>
+        <domainName>at</domainName>
+        <count>4846</count>
+        <nic>http://www.nic.at/</nic>
+        <countryName>Austria</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>co.at, ac.at, gv.at, or.at, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains31" msdata:rowOrder="30">
+        <countryCode>at</countryCode>
+        <domainName>co.at</domainName>
+        <count>44</count>
+        <nic />
+        <countryName>Austria</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains32" msdata:rowOrder="31">
+        <countryCode>at</countryCode>
+        <domainName>ac.at</domainName>
+        <count>27</count>
+        <nic />
+        <countryName>Austria</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains33" msdata:rowOrder="32">
+        <countryCode>at</countryCode>
+        <domainName>gv.at</domainName>
+        <count>17</count>
+        <nic />
+        <countryName>Austria</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains34" msdata:rowOrder="33">
+        <countryCode>at</countryCode>
+        <domainName>or.at</domainName>
+        <count>17</count>
+        <nic />
+        <countryName>Austria</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains35" msdata:rowOrder="34">
+        <countryCode>tv</countryCode>
+        <domainName>tv</domainName>
+        <count>4245</count>
+        <nic>http://www.tv</nic>
+        <countryName>Tuvalu</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains36" msdata:rowOrder="35">
+        <countryCode>ch</countryCode>
+        <domainName>ch</domainName>
+        <count>3844</count>
+        <nic>http://www.nic.ch/</nic>
+        <countryName>Switzerland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains37" msdata:rowOrder="36">
+        <countryCode>nl</countryCode>
+        <domainName>nl</domainName>
+        <count>2948</count>
+        <nic>http://www.domain-registry.nl/</nic>
+        <countryName>Netherlands</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains38" msdata:rowOrder="37">
+        <countryCode>us</countryCode>
+        <domainName>us</domainName>
+        <count>2522</count>
+        <nic>http://www.nic.us</nic>
+        <countryName>United States</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains39" msdata:rowOrder="38">
+        <countryCode>ws</countryCode>
+        <domainName>ws</domainName>
+        <count>2158</count>
+        <nic>http://www.samoanic.ws</nic>
+        <countryName>Samoa</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains40" msdata:rowOrder="39">
+        <countryCode>it</countryCode>
+        <domainName>it</domainName>
+        <count>1245</count>
+        <nic>http://www.nic.it/</nic>
+        <countryName>Italy</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains41" msdata:rowOrder="40">
+        <countryCode>ru</countryCode>
+        <domainName>ru</domainName>
+        <count>616</count>
+        <nic>http://www.cctld.ru/en</nic>
+        <countryName>Russian Federation</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.ru, net.ru, org.ru, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains42" msdata:rowOrder="41">
+        <countryCode>ru</countryCode>
+        <domainName>com.ru</domainName>
+        <count>3</count>
+        <nic />
+        <countryName>Russian Federation</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains43" msdata:rowOrder="42">
+        <countryCode>ru</countryCode>
+        <domainName>net.ru</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Russian Federation</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains44" msdata:rowOrder="43">
+        <countryCode>ru</countryCode>
+        <domainName>org.ru</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Russian Federation</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains45" msdata:rowOrder="44">
+        <countryCode>be</countryCode>
+        <domainName>be</domainName>
+        <count>598</count>
+        <nic>http://www.dns.be</nic>
+        <countryName>Belgium</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>ac.be, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains46" msdata:rowOrder="45">
+        <countryCode>be</countryCode>
+        <domainName>ac.be</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Belgium</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains47" msdata:rowOrder="46">
+        <countryCode>pl</countryCode>
+        <domainName>pl</domainName>
+        <count>472</count>
+        <nic>http://www.dns.pl/english/</nic>
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>net.pl, com.pl, travel.pl, org.pl, biz.pl, info.pl, agro.pl, edu.pl, mail.pl, targi.pl, aid.pl, atm.pl, auto.pl, gmina.pl, gsm.pl, miasta.pl, media.pl, mil.pl, nom.pl, pc.pl, priv.pl, realestate.pl, rel.pl, shop.pl, sklep.pl, sos.pl, tm.pl, tourism.pl, turystyka.pl, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains48" msdata:rowOrder="47">
+        <countryCode>pl</countryCode>
+        <domainName>net.pl</domainName>
+        <count>316</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains49" msdata:rowOrder="48">
+        <countryCode>pl</countryCode>
+        <domainName>com.pl</domainName>
+        <count>98</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains50" msdata:rowOrder="49">
+        <countryCode>pl</countryCode>
+        <domainName>travel.pl</domainName>
+        <count>7</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains51" msdata:rowOrder="50">
+        <countryCode>pl</countryCode>
+        <domainName>org.pl</domainName>
+        <count>4</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains52" msdata:rowOrder="51">
+        <countryCode>pl</countryCode>
+        <domainName>biz.pl</domainName>
+        <count>4</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains53" msdata:rowOrder="52">
+        <countryCode>pl</countryCode>
+        <domainName>info.pl</domainName>
+        <count>2</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains54" msdata:rowOrder="53">
+        <countryCode>pl</countryCode>
+        <domainName>agro.pl</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains55" msdata:rowOrder="54">
+        <countryCode>pl</countryCode>
+        <domainName>edu.pl</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains56" msdata:rowOrder="55">
+        <countryCode>pl</countryCode>
+        <domainName>mail.pl</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains57" msdata:rowOrder="56">
+        <countryCode>pl</countryCode>
+        <domainName>targi.pl</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains58" msdata:rowOrder="57">
+        <countryCode>pl</countryCode>
+        <domainName>aid.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains59" msdata:rowOrder="58">
+        <countryCode>pl</countryCode>
+        <domainName>atm.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains60" msdata:rowOrder="59">
+        <countryCode>pl</countryCode>
+        <domainName>auto.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains61" msdata:rowOrder="60">
+        <countryCode>pl</countryCode>
+        <domainName>gmina.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains62" msdata:rowOrder="61">
+        <countryCode>pl</countryCode>
+        <domainName>gsm.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains63" msdata:rowOrder="62">
+        <countryCode>pl</countryCode>
+        <domainName>miasta.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains64" msdata:rowOrder="63">
+        <countryCode>pl</countryCode>
+        <domainName>media.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains65" msdata:rowOrder="64">
+        <countryCode>pl</countryCode>
+        <domainName>mil.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains66" msdata:rowOrder="65">
+        <countryCode>pl</countryCode>
+        <domainName>nom.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains67" msdata:rowOrder="66">
+        <countryCode>pl</countryCode>
+        <domainName>pc.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains68" msdata:rowOrder="67">
+        <countryCode>pl</countryCode>
+        <domainName>priv.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains69" msdata:rowOrder="68">
+        <countryCode>pl</countryCode>
+        <domainName>realestate.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains70" msdata:rowOrder="69">
+        <countryCode>pl</countryCode>
+        <domainName>rel.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains71" msdata:rowOrder="70">
+        <countryCode>pl</countryCode>
+        <domainName>shop.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains72" msdata:rowOrder="71">
+        <countryCode>pl</countryCode>
+        <domainName>sklep.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains73" msdata:rowOrder="72">
+        <countryCode>pl</countryCode>
+        <domainName>sos.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains74" msdata:rowOrder="73">
+        <countryCode>pl</countryCode>
+        <domainName>tm.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains75" msdata:rowOrder="74">
+        <countryCode>pl</countryCode>
+        <domainName>tourism.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains76" msdata:rowOrder="75">
+        <countryCode>pl</countryCode>
+        <domainName>turystyka.pl</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Poland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains77" msdata:rowOrder="76">
+        <countryCode>br</countryCode>
+        <domainName>br</domainName>
+        <count>39</count>
+        <nic>http://registro.br/</nic>
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.br, adv.br, org.br, inf.br, arq.br, eng.br, fm.br, fot.br, gov.br, pro.br, slg.br, tv.br, adm.br, am.br, art.br, bio.br, cng.br, cnt.br, ecn.br, esp.br, etc.br, eti.br, fst.br, g12.br, ind.br, jor.br, lel.br, med.br, mil.br, net.br, nom.br, ntr.br, odo.br, ppg.br, psc.br, psi.br, rec.br, tmp.br, tur.br, vet.br, zlg.br, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains78" msdata:rowOrder="77">
+        <countryCode>br</countryCode>
+        <domainName>com.br</domainName>
+        <count>355</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains79" msdata:rowOrder="78">
+        <countryCode>br</countryCode>
+        <domainName>adv.br</domainName>
+        <count>81</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains80" msdata:rowOrder="79">
+        <countryCode>br</countryCode>
+        <domainName>org.br</domainName>
+        <count>5</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains81" msdata:rowOrder="80">
+        <countryCode>br</countryCode>
+        <domainName>inf.br</domainName>
+        <count>4</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains82" msdata:rowOrder="81">
+        <countryCode>br</countryCode>
+        <domainName>arq.br</domainName>
+        <count>2</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains83" msdata:rowOrder="82">
+        <countryCode>br</countryCode>
+        <domainName>eng.br</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains84" msdata:rowOrder="83">
+        <countryCode>br</countryCode>
+        <domainName>fm.br</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains85" msdata:rowOrder="84">
+        <countryCode>br</countryCode>
+        <domainName>fot.br</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains86" msdata:rowOrder="85">
+        <countryCode>br</countryCode>
+        <domainName>gov.br</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains87" msdata:rowOrder="86">
+        <countryCode>br</countryCode>
+        <domainName>pro.br</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains88" msdata:rowOrder="87">
+        <countryCode>br</countryCode>
+        <domainName>slg.br</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains89" msdata:rowOrder="88">
+        <countryCode>br</countryCode>
+        <domainName>tv.br</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains90" msdata:rowOrder="89">
+        <countryCode>br</countryCode>
+        <domainName>adm.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains91" msdata:rowOrder="90">
+        <countryCode>br</countryCode>
+        <domainName>am.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains92" msdata:rowOrder="91">
+        <countryCode>br</countryCode>
+        <domainName>art.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains93" msdata:rowOrder="92">
+        <countryCode>br</countryCode>
+        <domainName>bio.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains94" msdata:rowOrder="93">
+        <countryCode>br</countryCode>
+        <domainName>cng.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains95" msdata:rowOrder="94">
+        <countryCode>br</countryCode>
+        <domainName>cnt.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains96" msdata:rowOrder="95">
+        <countryCode>br</countryCode>
+        <domainName>ecn.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains97" msdata:rowOrder="96">
+        <countryCode>br</countryCode>
+        <domainName>esp.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains98" msdata:rowOrder="97">
+        <countryCode>br</countryCode>
+        <domainName>etc.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains99" msdata:rowOrder="98">
+        <countryCode>br</countryCode>
+        <domainName>eti.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains100" msdata:rowOrder="99">
+        <countryCode>br</countryCode>
+        <domainName>fst.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains101" msdata:rowOrder="100">
+        <countryCode>br</countryCode>
+        <domainName>g12.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains102" msdata:rowOrder="101">
+        <countryCode>br</countryCode>
+        <domainName>ind.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains103" msdata:rowOrder="102">
+        <countryCode>br</countryCode>
+        <domainName>jor.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains104" msdata:rowOrder="103">
+        <countryCode>br</countryCode>
+        <domainName>lel.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains105" msdata:rowOrder="104">
+        <countryCode>br</countryCode>
+        <domainName>med.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains106" msdata:rowOrder="105">
+        <countryCode>br</countryCode>
+        <domainName>mil.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains107" msdata:rowOrder="106">
+        <countryCode>br</countryCode>
+        <domainName>net.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains108" msdata:rowOrder="107">
+        <countryCode>br</countryCode>
+        <domainName>nom.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains109" msdata:rowOrder="108">
+        <countryCode>br</countryCode>
+        <domainName>ntr.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains110" msdata:rowOrder="109">
+        <countryCode>br</countryCode>
+        <domainName>odo.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains111" msdata:rowOrder="110">
+        <countryCode>br</countryCode>
+        <domainName>ppg.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains112" msdata:rowOrder="111">
+        <countryCode>br</countryCode>
+        <domainName>psc.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains113" msdata:rowOrder="112">
+        <countryCode>br</countryCode>
+        <domainName>psi.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains114" msdata:rowOrder="113">
+        <countryCode>br</countryCode>
+        <domainName>rec.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains115" msdata:rowOrder="114">
+        <countryCode>br</countryCode>
+        <domainName>tmp.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains116" msdata:rowOrder="115">
+        <countryCode>br</countryCode>
+        <domainName>tur.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains117" msdata:rowOrder="116">
+        <countryCode>br</countryCode>
+        <domainName>vet.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains118" msdata:rowOrder="117">
+        <countryCode>br</countryCode>
+        <domainName>zlg.br</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Brazil</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains119" msdata:rowOrder="118">
+        <countryCode>name</countryCode>
+        <domainName>name</domainName>
+        <count>306</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains120" msdata:rowOrder="119">
+        <countryCode>cc</countryCode>
+        <domainName>cc</domainName>
+        <count>276</count>
+        <nic>http://www.nic.cc/</nic>
+        <countryName>Cocos (Keeling) Islands</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains121" msdata:rowOrder="120">
+        <countryCode>to</countryCode>
+        <domainName>to</domainName>
+        <count>232</count>
+        <nic>http://www.tonic.to/</nic>
+        <countryName>Tonga</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains122" msdata:rowOrder="121">
+        <countryCode>tk</countryCode>
+        <domainName>tk</domainName>
+        <count>163</count>
+        <nic>http://www.dot.tk</nic>
+        <countryName>Tokelau</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains123" msdata:rowOrder="122">
+        <countryCode>ag</countryCode>
+        <domainName>ag</domainName>
+        <count>147</count>
+        <nic>http://www.nic.ag</nic>
+        <countryName>Antigua and Barbuda</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains124" msdata:rowOrder="123">
+        <countryCode>se</countryCode>
+        <domainName>se</domainName>
+        <count>146</count>
+        <nic>http://www.iis.se</nic>
+        <countryName>Sweden</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains125" msdata:rowOrder="124">
+        <countryCode>fr</countryCode>
+        <domainName>fr</domainName>
+        <count>140</count>
+        <nic>http://www.nic.fr/</nic>
+        <countryName>France</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>tm.fr, com.fr, asso.fr, presse.fr, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains126" msdata:rowOrder="125">
+        <countryCode>fr</countryCode>
+        <domainName>tm.fr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>France</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains127" msdata:rowOrder="126">
+        <countryCode>fr</countryCode>
+        <domainName>com.fr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>France</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains128" msdata:rowOrder="127">
+        <countryCode>fr</countryCode>
+        <domainName>asso.fr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>France</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains129" msdata:rowOrder="128">
+        <countryCode>fr</countryCode>
+        <domainName>presse.fr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>France</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains130" msdata:rowOrder="129">
+        <countryCode>dk</countryCode>
+        <domainName>dk</domainName>
+        <count>127</count>
+        <nic>http://www.dk-hostmaster.dk/</nic>
+        <countryName>Denmark</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains131" msdata:rowOrder="130">
+        <countryCode>ro</countryCode>
+        <domainName>ro</domainName>
+        <count>115</count>
+        <nic>http://www.rotld.ro/</nic>
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.ro, org.ro, store.ro, tm.ro, firm.ro, www.ro, arts.ro, rec.ro, info.ro, nom.ro, nt.ro, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains132" msdata:rowOrder="131">
+        <countryCode>ro</countryCode>
+        <domainName>com.ro</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains133" msdata:rowOrder="132">
+        <countryCode>ro</countryCode>
+        <domainName>org.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains134" msdata:rowOrder="133">
+        <countryCode>ro</countryCode>
+        <domainName>store.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains135" msdata:rowOrder="134">
+        <countryCode>ro</countryCode>
+        <domainName>tm.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains136" msdata:rowOrder="135">
+        <countryCode>ro</countryCode>
+        <domainName>firm.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains137" msdata:rowOrder="136">
+        <countryCode>ro</countryCode>
+        <domainName>www.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains138" msdata:rowOrder="137">
+        <countryCode>ro</countryCode>
+        <domainName>arts.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains139" msdata:rowOrder="138">
+        <countryCode>ro</countryCode>
+        <domainName>rec.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains140" msdata:rowOrder="139">
+        <countryCode>ro</countryCode>
+        <domainName>info.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains141" msdata:rowOrder="140">
+        <countryCode>ro</countryCode>
+        <domainName>nom.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains142" msdata:rowOrder="141">
+        <countryCode>ro</countryCode>
+        <domainName>nt.ro</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Romania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains143" msdata:rowOrder="142">
+        <countryCode>cz</countryCode>
+        <domainName>cz</domainName>
+        <count>96</count>
+        <nic>http://www.nic.cz/</nic>
+        <countryName>Czech Republic</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains144" msdata:rowOrder="143">
+        <countryCode>ac</countryCode>
+        <domainName>ac</domainName>
+        <count>85</count>
+        <nic>http://www.nic.ac/</nic>
+        <countryName>Ascension Island</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>or.ac, co.ac, gv.ac, ac.ac, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains145" msdata:rowOrder="144">
+        <countryCode>ac</countryCode>
+        <domainName>or.ac</domainName>
+        <count>4</count>
+        <nic />
+        <countryName>Ascension Island</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains146" msdata:rowOrder="145">
+        <countryCode>ac</countryCode>
+        <domainName>co.ac</domainName>
+        <count>2</count>
+        <nic />
+        <countryName>Ascension Island</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains147" msdata:rowOrder="146">
+        <countryCode>ac</countryCode>
+        <domainName>gv.ac</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Ascension Island</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains148" msdata:rowOrder="147">
+        <countryCode>ac</countryCode>
+        <domainName>ac.ac</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Ascension Island</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains149" msdata:rowOrder="148">
+        <countryCode>ms</countryCode>
+        <domainName>ms</domainName>
+        <count>85</count>
+        <nic>http://www.adamsnames.tc/</nic>
+        <countryName>Montserrat</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains150" msdata:rowOrder="149">
+        <countryCode>tf</countryCode>
+        <domainName>tf</domainName>
+        <count>56</count>
+        <nic>http://www.nic.tf/</nic>
+        <countryName>French Southern Territories</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains151" msdata:rowOrder="150">
+        <countryCode>tc</countryCode>
+        <domainName>tc</domainName>
+        <count>32</count>
+        <nic>http://www.adamsnames.tc/</nic>
+        <countryName>Turks and Caicos Islands</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains152" msdata:rowOrder="151">
+        <countryCode>gs</countryCode>
+        <domainName>gs</domainName>
+        <count>18</count>
+        <nic>http://www.nic.gs/</nic>
+        <countryName>South Georgia and the South Sandwich Islands</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains153" msdata:rowOrder="152">
+        <countryCode>vg</countryCode>
+        <domainName>vg</domainName>
+        <count>4</count>
+        <nic>http://www.adamsnames.tc/</nic>
+        <countryName>Virgin Islands, British</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains154" msdata:rowOrder="153">
+        <countryCode>li</countryCode>
+        <domainName>li</domainName>
+        <count>81</count>
+        <nic>http://www.nic.li</nic>
+        <countryName>Liechtenstein</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains155" msdata:rowOrder="154">
+        <countryCode>am</countryCode>
+        <domainName>am</domainName>
+        <count>79</count>
+        <nic>http://www.amnic.net</nic>
+        <countryName>Armenia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains156" msdata:rowOrder="155">
+        <countryCode>gr</countryCode>
+        <domainName>gr</domainName>
+        <count>76</count>
+        <nic>http://www.gr</nic>
+        <countryName>Greece</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains157" msdata:rowOrder="156">
+        <countryCode>pt</countryCode>
+        <domainName>pt</domainName>
+        <count>64</count>
+        <nic>http://www.dns.pt/</nic>
+        <countryName>Portugal</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains158" msdata:rowOrder="157">
+        <countryCode>sk</countryCode>
+        <domainName>sk</domainName>
+        <count>53</count>
+        <nic>http://www.sk-nic.sk</nic>
+        <countryName>Slovak Republic</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains159" msdata:rowOrder="158">
+        <countryCode>by</countryCode>
+        <domainName>by</domainName>
+        <count>51</count>
+        <nic>http://www.tld.by</nic>
+        <countryName>Belarus</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains160" msdata:rowOrder="159">
+        <countryCode>lv</countryCode>
+        <domainName>lv</domainName>
+        <count>30</count>
+        <nic>http://www.nic.lv/DNS/</nic>
+        <countryName>Latvia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>eu.lv, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains161" msdata:rowOrder="160">
+        <countryCode>lv</countryCode>
+        <domainName>eu.lv</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Latvia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains162" msdata:rowOrder="161">
+        <countryCode>lt</countryCode>
+        <domainName>lt</domainName>
+        <count>26</count>
+        <nic>http://www.domreg.lt</nic>
+        <countryName>Lithuania</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains163" msdata:rowOrder="162">
+        <countryCode>ad</countryCode>
+        <domainName>ad</domainName>
+        <count>5</count>
+        <nic>http://www.nic.ad</nic>
+        <countryName>Andorra</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains164" msdata:rowOrder="163">
+        <countryCode>fo</countryCode>
+        <domainName>fo</domainName>
+        <count>2</count>
+        <nic>http://www.nic.fo/</nic>
+        <countryName>Faroe Islands</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains165" msdata:rowOrder="164">
+        <countryCode>ca</countryCode>
+        <domainName>ca</domainName>
+        <count>71</count>
+        <nic>http://www.cira.ca/</nic>
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>on.ca, qc.ca, ns.ca, ab.ca, bc.ca, mb.ca, nb.ca, nf.ca, nt.ca, pe.ca, sk.ca, yk.ca, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains166" msdata:rowOrder="165">
+        <countryCode>ca</countryCode>
+        <domainName>on.ca</domainName>
+        <count>2</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains167" msdata:rowOrder="166">
+        <countryCode>ca</countryCode>
+        <domainName>qc.ca</domainName>
+        <count>2</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains168" msdata:rowOrder="167">
+        <countryCode>ca</countryCode>
+        <domainName>ns.ca</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains169" msdata:rowOrder="168">
+        <countryCode>ca</countryCode>
+        <domainName>ab.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains170" msdata:rowOrder="169">
+        <countryCode>ca</countryCode>
+        <domainName>bc.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains171" msdata:rowOrder="170">
+        <countryCode>ca</countryCode>
+        <domainName>mb.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains172" msdata:rowOrder="171">
+        <countryCode>ca</countryCode>
+        <domainName>nb.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains173" msdata:rowOrder="172">
+        <countryCode>ca</countryCode>
+        <domainName>nf.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains174" msdata:rowOrder="173">
+        <countryCode>ca</countryCode>
+        <domainName>nt.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains175" msdata:rowOrder="174">
+        <countryCode>ca</countryCode>
+        <domainName>pe.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains176" msdata:rowOrder="175">
+        <countryCode>ca</countryCode>
+        <domainName>sk.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains177" msdata:rowOrder="176">
+        <countryCode>ca</countryCode>
+        <domainName>yk.ca</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Canada</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains178" msdata:rowOrder="177">
+        <countryCode>mx</countryCode>
+        <domainName>mx</domainName>
+        <count>23</count>
+        <nic>http://www.nic.mx/</nic>
+        <countryName>Mexico</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.mx, gob.mx, org.mx, edu.mx, gov.mx, net.mx, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains179" msdata:rowOrder="178">
+        <countryCode>mx</countryCode>
+        <domainName>com.mx</domainName>
+        <count>71</count>
+        <nic />
+        <countryName>Mexico</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains180" msdata:rowOrder="179">
+        <countryCode>mx</countryCode>
+        <domainName>gob.mx</domainName>
+        <count>7</count>
+        <nic />
+        <countryName>Mexico</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains181" msdata:rowOrder="180">
+        <countryCode>mx</countryCode>
+        <domainName>org.mx</domainName>
+        <count>2</count>
+        <nic />
+        <countryName>Mexico</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains182" msdata:rowOrder="181">
+        <countryCode>mx</countryCode>
+        <domainName>edu.mx</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Mexico</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains183" msdata:rowOrder="182">
+        <countryCode>mx</countryCode>
+        <domainName>gov.mx</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Mexico</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains184" msdata:rowOrder="183">
+        <countryCode>mx</countryCode>
+        <domainName>net.mx</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Mexico</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains185" msdata:rowOrder="184">
+        <countryCode>cn</countryCode>
+        <domainName>cn</domainName>
+        <count>68</count>
+        <nic>http://www.cnnic.net.cn/</nic>
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.cn, gd.cn, org.cn, edu.cn, ac.cn, gov.cn, net.cn, bj.cn, sh.cn, tj.cn, cq.cn, he.cn, nm.cn, ln.cn, jl.cn, hl.cn, js.cn, zj.cn, ah.cn, hb.cn, hn.cn, gx.cn, hi.cn, sc.cn, gz.cn, yn.cn, xz.cn, sn.cn, gs.cn, qh.cn, nx.cn, xj.cn, tw.cn, hk.cn, mo.cn, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains186" msdata:rowOrder="185">
+        <countryCode>cn</countryCode>
+        <domainName>com.cn</domainName>
+        <count>46</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains187" msdata:rowOrder="186">
+        <countryCode>cn</countryCode>
+        <domainName>gd.cn</domainName>
+        <count>6</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains188" msdata:rowOrder="187">
+        <countryCode>cn</countryCode>
+        <domainName>org.cn</domainName>
+        <count>4</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains189" msdata:rowOrder="188">
+        <countryCode>cn</countryCode>
+        <domainName>edu.cn</domainName>
+        <count>3</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains190" msdata:rowOrder="189">
+        <countryCode>cn</countryCode>
+        <domainName>ac.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains191" msdata:rowOrder="190">
+        <countryCode>cn</countryCode>
+        <domainName>gov.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains192" msdata:rowOrder="191">
+        <countryCode>cn</countryCode>
+        <domainName>net.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains193" msdata:rowOrder="192">
+        <countryCode>cn</countryCode>
+        <domainName>bj.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains194" msdata:rowOrder="193">
+        <countryCode>cn</countryCode>
+        <domainName>sh.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains195" msdata:rowOrder="194">
+        <countryCode>cn</countryCode>
+        <domainName>tj.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains196" msdata:rowOrder="195">
+        <countryCode>cn</countryCode>
+        <domainName>cq.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains197" msdata:rowOrder="196">
+        <countryCode>cn</countryCode>
+        <domainName>he.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains198" msdata:rowOrder="197">
+        <countryCode>cn</countryCode>
+        <domainName>nm.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains199" msdata:rowOrder="198">
+        <countryCode>cn</countryCode>
+        <domainName>ln.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains200" msdata:rowOrder="199">
+        <countryCode>cn</countryCode>
+        <domainName>jl.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains201" msdata:rowOrder="200">
+        <countryCode>cn</countryCode>
+        <domainName>hl.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains202" msdata:rowOrder="201">
+        <countryCode>cn</countryCode>
+        <domainName>js.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains203" msdata:rowOrder="202">
+        <countryCode>cn</countryCode>
+        <domainName>zj.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains204" msdata:rowOrder="203">
+        <countryCode>cn</countryCode>
+        <domainName>ah.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains205" msdata:rowOrder="204">
+        <countryCode>cn</countryCode>
+        <domainName>hb.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains206" msdata:rowOrder="205">
+        <countryCode>cn</countryCode>
+        <domainName>hn.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains207" msdata:rowOrder="206">
+        <countryCode>cn</countryCode>
+        <domainName>gx.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains208" msdata:rowOrder="207">
+        <countryCode>cn</countryCode>
+        <domainName>hi.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains209" msdata:rowOrder="208">
+        <countryCode>cn</countryCode>
+        <domainName>sc.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains210" msdata:rowOrder="209">
+        <countryCode>cn</countryCode>
+        <domainName>gz.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains211" msdata:rowOrder="210">
+        <countryCode>cn</countryCode>
+        <domainName>yn.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains212" msdata:rowOrder="211">
+        <countryCode>cn</countryCode>
+        <domainName>xz.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains213" msdata:rowOrder="212">
+        <countryCode>cn</countryCode>
+        <domainName>sn.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains214" msdata:rowOrder="213">
+        <countryCode>cn</countryCode>
+        <domainName>gs.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains215" msdata:rowOrder="214">
+        <countryCode>cn</countryCode>
+        <domainName>qh.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains216" msdata:rowOrder="215">
+        <countryCode>cn</countryCode>
+        <domainName>nx.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains217" msdata:rowOrder="216">
+        <countryCode>cn</countryCode>
+        <domainName>xj.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains218" msdata:rowOrder="217">
+        <countryCode>cn</countryCode>
+        <domainName>tw.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains219" msdata:rowOrder="218">
+        <countryCode>cn</countryCode>
+        <domainName>hk.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains220" msdata:rowOrder="219">
+        <countryCode>cn</countryCode>
+        <domainName>mo.cn</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>China</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains221" msdata:rowOrder="220">
+        <countryCode>edu</countryCode>
+        <domainName>edu</domainName>
+        <count>59</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains222" msdata:rowOrder="221">
+        <countryCode>pro</countryCode>
+        <domainName>pro</domainName>
+        <count>40</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains223" msdata:rowOrder="222">
+        <countryCode>mil</countryCode>
+        <domainName>mil</domainName>
+        <count>12</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains224" msdata:rowOrder="223">
+        <countryCode>lu</countryCode>
+        <domainName>lu</domainName>
+        <count>59</count>
+        <nic>http://www.dns.lu</nic>
+        <countryName>Luxembourg</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains225" msdata:rowOrder="224">
+        <countryCode>cx</countryCode>
+        <domainName>cx</domainName>
+        <count>53</count>
+        <nic>http://www.nic.cx</nic>
+        <countryName>Christmas Island</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains226" msdata:rowOrder="225">
+        <countryCode>jp</countryCode>
+        <domainName>jp</domainName>
+        <count>47</count>
+        <nic>http://jprs.jp/</nic>
+        <countryName>Japan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>co.jp, or.jp, ne.jp, ac.jp, go.jp, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains227" msdata:rowOrder="226">
+        <countryCode>jp</countryCode>
+        <domainName>co.jp</domainName>
+        <count>23</count>
+        <nic />
+        <countryName>Japan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains228" msdata:rowOrder="227">
+        <countryCode>jp</countryCode>
+        <domainName>or.jp</domainName>
+        <count>8</count>
+        <nic />
+        <countryName>Japan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains229" msdata:rowOrder="228">
+        <countryCode>jp</countryCode>
+        <domainName>ne.jp</domainName>
+        <count>3</count>
+        <nic />
+        <countryName>Japan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains230" msdata:rowOrder="229">
+        <countryCode>jp</countryCode>
+        <domainName>ac.jp</domainName>
+        <count>2</count>
+        <nic />
+        <countryName>Japan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains231" msdata:rowOrder="230">
+        <countryCode>jp</countryCode>
+        <domainName>go.jp</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Japan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains232" msdata:rowOrder="231">
+        <countryCode>nu</countryCode>
+        <domainName>nu</domainName>
+        <count>44</count>
+        <nic>http://www.nunames.nu/</nic>
+        <countryName>Niue</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains233" msdata:rowOrder="232">
+        <countryCode>si</countryCode>
+        <domainName>si</domainName>
+        <count>40</count>
+        <nic>http://www.arnes.si/si-domene/</nic>
+        <countryName>Slovenia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains234" msdata:rowOrder="233">
+        <countryCode>au</countryCode>
+        <domainName>au</domainName>
+        <count>29</count>
+        <nic>http://www.aunic.net</nic>
+        <countryName>Australia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.au, org.au, org.au, edu.au, net.au, edu.au, net.au, asn.au, id.au, asn.au, id.au, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains235" msdata:rowOrder="234">
+        <countryCode>au</countryCode>
+        <domainName>com.au</domainName>
+        <count>90</count>
+        <nic />
+        <countryName>Australia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains236" msdata:rowOrder="235">
+        <countryCode>au</countryCode>
+        <domainName>org.au</domainName>
+        <count>7</count>
+        <nic />
+        <countryName>Australia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains237" msdata:rowOrder="236">
+        <countryCode>au</countryCode>
+        <domainName>edu.au</domainName>
+        <count>5</count>
+        <nic />
+        <countryName>Australia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains238" msdata:rowOrder="237">
+        <countryCode>au</countryCode>
+        <domainName>net.au</domainName>
+        <count>5</count>
+        <nic />
+        <countryName>Australia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains239" msdata:rowOrder="238">
+        <countryCode>au</countryCode>
+        <domainName>asn.au</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Australia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains240" msdata:rowOrder="239">
+        <countryCode>au</countryCode>
+        <domainName>id.au</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Australia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains241" msdata:rowOrder="240">
+        <countryCode>st</countryCode>
+        <domainName>st</domainName>
+        <count>24</count>
+        <nic>http://www.nic.st</nic>
+        <countryName>Sao Tome and Principe</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains242" msdata:rowOrder="241">
+        <countryCode>ua</countryCode>
+        <domainName>ua</domainName>
+        <count>24</count>
+        <nic>http://nic.net.ua/</nic>
+        <countryName>Ukraine</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains243" msdata:rowOrder="242">
+        <countryCode>gov</countryCode>
+        <domainName>gov</domainName>
+        <count>22</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains244" msdata:rowOrder="243">
+        <countryCode>ie</countryCode>
+        <domainName>ie</domainName>
+        <count>15</count>
+        <nic>http://www.domainregistry.ie</nic>
+        <countryName>Ireland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains245" msdata:rowOrder="244">
+        <countryCode>no</countryCode>
+        <domainName>no</domainName>
+        <count>15</count>
+        <nic>http://www.norid.no</nic>
+        <countryName>Norway</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains246" msdata:rowOrder="245">
+        <countryCode>as</countryCode>
+        <domainName>as</domainName>
+        <count>14</count>
+        <nic>http://www.nic.as</nic>
+        <countryName>American Samoa</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains247" msdata:rowOrder="246">
+        <countryCode>il</countryCode>
+        <domainName>il</domainName>
+        <count>8</count>
+        <nic>http://www.isoc.org.il/domains</nic>
+        <countryName>Israel</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>co.il, org.il, net.il, ac.il, k12.il, gov.il, muni.il, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains248" msdata:rowOrder="247">
+        <countryCode>il</countryCode>
+        <domainName>co.il</domainName>
+        <count>13</count>
+        <nic />
+        <countryName>Israel</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains249" msdata:rowOrder="248">
+        <countryCode>il</countryCode>
+        <domainName>org.il</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Israel</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains250" msdata:rowOrder="249">
+        <countryCode>il</countryCode>
+        <domainName>net.il</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Israel</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains251" msdata:rowOrder="250">
+        <countryCode>il</countryCode>
+        <domainName>ac.il</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Israel</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains252" msdata:rowOrder="251">
+        <countryCode>il</countryCode>
+        <domainName>k12.il</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Israel</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains253" msdata:rowOrder="252">
+        <countryCode>il</countryCode>
+        <domainName>gov.il</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Israel</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains254" msdata:rowOrder="253">
+        <countryCode>il</countryCode>
+        <domainName>muni.il</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Israel</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains255" msdata:rowOrder="254">
+        <countryCode>bz</countryCode>
+        <domainName>bz</domainName>
+        <count>11</count>
+        <nic>http://www.belizenic.bz</nic>
+        <countryName>Belize</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains256" msdata:rowOrder="255">
+        <countryCode>cl</countryCode>
+        <domainName>cl</domainName>
+        <count>10</count>
+        <nic>http://www.nic.cl/</nic>
+        <countryName>Chile</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains257" msdata:rowOrder="256">
+        <countryCode>kr</countryCode>
+        <domainName>kr</domainName>
+        <count>9</count>
+        <nic>http://www.nic.or.kr/</nic>
+        <countryName>Korea, Republic of</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>co.kr, ac.kr, go.kr, ne.kr, nm.kr, or.kr, re.kr, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains258" msdata:rowOrder="257">
+        <countryCode>kr</countryCode>
+        <domainName>co.kr</domainName>
+        <count>8</count>
+        <nic />
+        <countryName>Korea, Republic of</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains259" msdata:rowOrder="258">
+        <countryCode>kr</countryCode>
+        <domainName>ac.kr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Korea, Republic of</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains260" msdata:rowOrder="259">
+        <countryCode>kr</countryCode>
+        <domainName>go.kr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Korea, Republic of</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains261" msdata:rowOrder="260">
+        <countryCode>kr</countryCode>
+        <domainName>ne.kr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Korea, Republic of</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains262" msdata:rowOrder="261">
+        <countryCode>kr</countryCode>
+        <domainName>nm.kr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Korea, Republic of</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains263" msdata:rowOrder="262">
+        <countryCode>kr</countryCode>
+        <domainName>or.kr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Korea, Republic of</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains264" msdata:rowOrder="263">
+        <countryCode>kr</countryCode>
+        <domainName>re.kr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Korea, Republic of</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains265" msdata:rowOrder="264">
+        <countryCode>is</countryCode>
+        <domainName>is</domainName>
+        <count>8</count>
+        <nic>http://www.isnic.is/</nic>
+        <countryName>Iceland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains266" msdata:rowOrder="265">
+        <countryCode>af</countryCode>
+        <domainName>af</domainName>
+        <count>6</count>
+        <nic>http://www.nic.af/</nic>
+        <countryName>Afghanistan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains267" msdata:rowOrder="266">
+        <countryCode>aero</countryCode>
+        <domainName>aero</domainName>
+        <count>5</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains268" msdata:rowOrder="267">
+        <countryCode>sh</countryCode>
+        <domainName>sh</domainName>
+        <count>5</count>
+        <nic>http://www.nic.sh/</nic>
+        <countryName>Saint Helena</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains269" msdata:rowOrder="268">
+        <countryCode>sg</countryCode>
+        <domainName>sg</domainName>
+        <count>4</count>
+        <nic>http://www.nic.net.sg/</nic>
+        <countryName>Singapore</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.sg, org.sg, net.sg, gov.sg, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains270" msdata:rowOrder="269">
+        <countryCode>sg</countryCode>
+        <domainName>com.sg</domainName>
+        <count>4</count>
+        <nic />
+        <countryName>Singapore</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains271" msdata:rowOrder="270">
+        <countryCode>sg</countryCode>
+        <domainName>org.sg</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Singapore</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains272" msdata:rowOrder="271">
+        <countryCode>sg</countryCode>
+        <domainName>net.sg</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Singapore</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains273" msdata:rowOrder="272">
+        <countryCode>sg</countryCode>
+        <domainName>gov.sg</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Singapore</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains274" msdata:rowOrder="273">
+        <countryCode>tm</countryCode>
+        <domainName>tm</domainName>
+        <count>2</count>
+        <nic>http://www.nic.tm/</nic>
+        <countryName>Turkmenistan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains275" msdata:rowOrder="274">
+        <countryCode>bj</countryCode>
+        <domainName>bj</domainName>
+        <count>0</count>
+        <nic>http://www.nic.bj</nic>
+        <countryName>Benin</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains276" msdata:rowOrder="275">
+        <countryCode>cat</countryCode>
+        <domainName>cat</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains277" msdata:rowOrder="276">
+        <countryCode>cd</countryCode>
+        <domainName>cd</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Congo, The Democratic Republic of the</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains278" msdata:rowOrder="277">
+        <countryCode>ci</countryCode>
+        <domainName>ci</domainName>
+        <count>0</count>
+        <nic>http://www.nic.ci</nic>
+        <countryName>Cote d\Ivoire</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains279" msdata:rowOrder="278">
+        <countryCode>coop</countryCode>
+        <domainName>coop</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains280" msdata:rowOrder="279">
+        <countryCode>ee</countryCode>
+        <domainName>ee</domainName>
+        <count>0</count>
+        <nic>http://www.eenet.ee/services/subdomains.html</nic>
+        <countryName>Estonia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains281" msdata:rowOrder="280">
+        <countryCode>eu</countryCode>
+        <domainName>eu</domainName>
+        <count>0</count>
+        <nic>http://www.eurid.eu</nic>
+        <countryName>European Union</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains282" msdata:rowOrder="281">
+        <countryCode>fi</countryCode>
+        <domainName>fi</domainName>
+        <count>0</count>
+        <nic>http://www.ficora.fi</nic>
+        <countryName>Finland</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains283" msdata:rowOrder="282">
+        <countryCode>gf</countryCode>
+        <domainName>gf</domainName>
+        <count>0</count>
+        <nic>http://www.nplus.gf/</nic>
+        <countryName>French Guiana</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains284" msdata:rowOrder="283">
+        <countryCode>gg</countryCode>
+        <domainName>gg</domainName>
+        <count>0</count>
+        <nic>http://www.channelisles.net/</nic>
+        <countryName>Guernsey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains285" msdata:rowOrder="284">
+        <countryCode>je</countryCode>
+        <domainName>je</domainName>
+        <count>0</count>
+        <nic>http://www.channelisles.net/</nic>
+        <countryName>Jersey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains286" msdata:rowOrder="285">
+        <countryCode>hk</countryCode>
+        <domainName>hk</domainName>
+        <count>0</count>
+        <nic>http://www.hkirc.hk</nic>
+        <countryName>Hong Kong</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.hk, org.hk, net.hk, edu.hk, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains287" msdata:rowOrder="286">
+        <countryCode>hk</countryCode>
+        <domainName>com.hk</domainName>
+        <count>40</count>
+        <nic />
+        <countryName>Hong Kong</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains288" msdata:rowOrder="287">
+        <countryCode>hk</countryCode>
+        <domainName>org.hk</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Hong Kong</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains289" msdata:rowOrder="288">
+        <countryCode>hk</countryCode>
+        <domainName>net.hk</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Hong Kong</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains290" msdata:rowOrder="289">
+        <countryCode>hk</countryCode>
+        <domainName>edu.hk</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Hong Kong</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains291" msdata:rowOrder="290">
+        <countryCode>hn</countryCode>
+        <domainName>hn</domainName>
+        <count>0</count>
+        <nic>http://www.nic.hn</nic>
+        <countryName>Honduras</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains292" msdata:rowOrder="291">
+        <countryCode>sc</countryCode>
+        <domainName>sc</domainName>
+        <count>0</count>
+        <nic>http://www.nic.sc</nic>
+        <countryName>Seychelles</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains293" msdata:rowOrder="292">
+        <countryCode>vc</countryCode>
+        <domainName>vc</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Saint Vincent and the Grenadines</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains294" msdata:rowOrder="293">
+        <countryCode>hu</countryCode>
+        <domainName>hu</domainName>
+        <count>0</count>
+        <nic>http://www.nic.hu</nic>
+        <countryName>Hungary</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains295" msdata:rowOrder="294">
+        <countryCode>in</countryCode>
+        <domainName>in</domainName>
+        <count>0</count>
+        <nic>http://www.registry.in</nic>
+        <countryName>India</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>ac.in, co.in, ernet.in, gov.in, net.in, res.in, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains296" msdata:rowOrder="295">
+        <countryCode>in</countryCode>
+        <domainName>ac.in</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>India</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains297" msdata:rowOrder="296">
+        <countryCode>in</countryCode>
+        <domainName>co.in</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>India</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains298" msdata:rowOrder="297">
+        <countryCode>in</countryCode>
+        <domainName>ernet.in</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>India</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains299" msdata:rowOrder="298">
+        <countryCode>in</countryCode>
+        <domainName>gov.in</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>India</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains300" msdata:rowOrder="299">
+        <countryCode>in</countryCode>
+        <domainName>net.in</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>India</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains301" msdata:rowOrder="300">
+        <countryCode>in</countryCode>
+        <domainName>res.in</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>India</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains302" msdata:rowOrder="301">
+        <countryCode>int</countryCode>
+        <domainName>int</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains303" msdata:rowOrder="302">
+        <countryCode>io</countryCode>
+        <domainName>io</domainName>
+        <count>0</count>
+        <nic>http://www.nic.io/</nic>
+        <countryName>British Indian Ocean Territory</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains304" msdata:rowOrder="303">
+        <countryCode>ke</countryCode>
+        <domainName>ke</domainName>
+        <count>0</count>
+        <nic>http://www.kenic.or.ke</nic>
+        <countryName>Kenya</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains305" msdata:rowOrder="304">
+        <countryCode>kz</countryCode>
+        <domainName>kz</domainName>
+        <count>0</count>
+        <nic>http://www.nic.kz</nic>
+        <countryName>Kazakhstan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains306" msdata:rowOrder="305">
+        <countryCode>mg</countryCode>
+        <domainName>mg</domainName>
+        <count>0</count>
+        <nic>http://www.nic.mg</nic>
+        <countryName>Madagascar</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains307" msdata:rowOrder="306">
+        <countryCode>mn</countryCode>
+        <domainName>mn</domainName>
+        <count>0</count>
+        <nic>http://www.nic.mn</nic>
+        <countryName>Mongolia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains308" msdata:rowOrder="307">
+        <countryCode>museum</countryCode>
+        <domainName>museum</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains309" msdata:rowOrder="308">
+        <countryCode>my</countryCode>
+        <domainName>my</domainName>
+        <count>0</count>
+        <nic>http://www.mynic.net.my</nic>
+        <countryName>Malaysia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains310" msdata:rowOrder="309">
+        <countryCode>na</countryCode>
+        <domainName>na</domainName>
+        <count>0</count>
+        <nic>http://www.na-nic.com.na/</nic>
+        <countryName>Namibia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains311" msdata:rowOrder="310">
+        <countryCode>nz</countryCode>
+        <domainName>nz</domainName>
+        <count>0</count>
+        <nic>http://www.dnc.org.nz/</nic>
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>co.nz, net.nz, maori.nz, org.nz, govt.nz, iwi.nz, cri.nz, school.nz, ac.nz, mil.nz, gen.nz, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains312" msdata:rowOrder="311">
+        <countryCode>nz</countryCode>
+        <domainName>co.nz</domainName>
+        <count>11</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains313" msdata:rowOrder="312">
+        <countryCode>nz</countryCode>
+        <domainName>net.nz</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains314" msdata:rowOrder="313">
+        <countryCode>nz</countryCode>
+        <domainName>maori.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains315" msdata:rowOrder="314">
+        <countryCode>nz</countryCode>
+        <domainName>org.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains316" msdata:rowOrder="315">
+        <countryCode>nz</countryCode>
+        <domainName>govt.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains317" msdata:rowOrder="316">
+        <countryCode>nz</countryCode>
+        <domainName>iwi.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains318" msdata:rowOrder="317">
+        <countryCode>nz</countryCode>
+        <domainName>cri.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains319" msdata:rowOrder="318">
+        <countryCode>nz</countryCode>
+        <domainName>school.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains320" msdata:rowOrder="319">
+        <countryCode>nz</countryCode>
+        <domainName>ac.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains321" msdata:rowOrder="320">
+        <countryCode>nz</countryCode>
+        <domainName>mil.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains322" msdata:rowOrder="321">
+        <countryCode>nz</countryCode>
+        <domainName>gen.nz</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>New Zealand</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains323" msdata:rowOrder="322">
+        <countryCode>pm</countryCode>
+        <domainName>pm</domainName>
+        <count>0</count>
+        <nic>http://www.nic.pm/</nic>
+        <countryName>Saint Pierre and Miquelon</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains324" msdata:rowOrder="323">
+        <countryCode>pr</countryCode>
+        <domainName>pr</domainName>
+        <count>0</count>
+        <nic>http://www.nic.pr</nic>
+        <countryName>Puerto Rico</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains325" msdata:rowOrder="324">
+        <countryCode>re</countryCode>
+        <domainName>re</domainName>
+        <count>0</count>
+        <nic>http://www.nic.re/</nic>
+        <countryName>Reunion Island</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains326" msdata:rowOrder="325">
+        <countryCode>tj</countryCode>
+        <domainName>tj</domainName>
+        <count>0</count>
+        <nic>http://www.nic.tj/</nic>
+        <countryName>Tajikistan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains327" msdata:rowOrder="326">
+        <countryCode>tl</countryCode>
+        <domainName>tl</domainName>
+        <count>0</count>
+        <nic>http://www.nic.tl</nic>
+        <countryName>Timor-Leste</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains328" msdata:rowOrder="327">
+        <countryCode>tr</countryCode>
+        <domainName>tr</domainName>
+        <count>0</count>
+        <nic>http://www.nic.tr</nic>
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.tr, gov.tr, bbs.tr, k12.tr, edu.tr, net.tr, mil.tr, org.tr, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains329" msdata:rowOrder="328">
+        <countryCode>tr</countryCode>
+        <domainName>com.tr</domainName>
+        <count>66</count>
+        <nic />
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains330" msdata:rowOrder="329">
+        <countryCode>tr</countryCode>
+        <domainName>gov.tr</domainName>
+        <count>8</count>
+        <nic />
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains331" msdata:rowOrder="330">
+        <countryCode>tr</countryCode>
+        <domainName>bbs.tr</domainName>
+        <count>7</count>
+        <nic />
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains332" msdata:rowOrder="331">
+        <countryCode>tr</countryCode>
+        <domainName>k12.tr</domainName>
+        <count>6</count>
+        <nic />
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains333" msdata:rowOrder="332">
+        <countryCode>tr</countryCode>
+        <domainName>edu.tr</domainName>
+        <count>4</count>
+        <nic />
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains334" msdata:rowOrder="333">
+        <countryCode>tr</countryCode>
+        <domainName>net.tr</domainName>
+        <count>1</count>
+        <nic />
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains335" msdata:rowOrder="334">
+        <countryCode>tr</countryCode>
+        <domainName>mil.tr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains336" msdata:rowOrder="335">
+        <countryCode>tr</countryCode>
+        <domainName>org.tr</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Turkey</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains337" msdata:rowOrder="336">
+        <countryCode>tw</countryCode>
+        <domainName>tw</domainName>
+        <count>0</count>
+        <nic>http://rs.twnic.net.tw</nic>
+        <countryName>Taiwan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.tw, org.tw, net.tw, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains338" msdata:rowOrder="337">
+        <countryCode>tw</countryCode>
+        <domainName>com.tw</domainName>
+        <count>21</count>
+        <nic />
+        <countryName>Taiwan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains339" msdata:rowOrder="338">
+        <countryCode>tw</countryCode>
+        <domainName>org.tw</domainName>
+        <count>2</count>
+        <nic />
+        <countryName>Taiwan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains340" msdata:rowOrder="339">
+        <countryCode>tw</countryCode>
+        <domainName>net.tw</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Taiwan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains341" msdata:rowOrder="340">
+        <countryCode>ug</countryCode>
+        <domainName>ug</domainName>
+        <count>0</count>
+        <nic>http://www.registry.co.ug</nic>
+        <countryName>Uganda</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains342" msdata:rowOrder="341">
+        <countryCode>uz</countryCode>
+        <domainName>uz</domainName>
+        <count>0</count>
+        <nic>http://www.cctld.uz/</nic>
+        <countryName>Uzbekistan</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains343" msdata:rowOrder="342">
+        <countryCode>ve</countryCode>
+        <domainName>ve</domainName>
+        <count>0</count>
+        <nic>http://www.nic.ve/</nic>
+        <countryName>Venezuela</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains344" msdata:rowOrder="343">
+        <countryCode>wf</countryCode>
+        <domainName>wf</domainName>
+        <count>0</count>
+        <nic>http://www.nic.wf/</nic>
+        <countryName>Wallis and Futuna Islands</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains345" msdata:rowOrder="344">
+        <countryCode>yt</countryCode>
+        <domainName>yt</domainName>
+        <count>0</count>
+        <nic>http://www.nic.yt/</nic>
+        <countryName>Mayotte</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains346" msdata:rowOrder="345">
+        <countryCode>rs</countryCode>
+        <domainName>rs</domainName>
+        <count>0</count>
+        <nic>http://www.rnids.rs/whois</nic>
+        <countryName>Serbia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>co.rs, edu.rs, org.rs, in.rs</subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains347" msdata:rowOrder="346">
+        <countryCode>rs</countryCode>
+        <domainName>co.rs</domainName>
+        <count>0</count>
+        <nic>http://www.rnids.rs/whois</nic>
+        <countryName>Serbia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains348" msdata:rowOrder="347">
+        <countryCode>rs</countryCode>
+        <domainName>org.rs</domainName>
+        <count>0</count>
+        <nic>http://www.rnids.rs/whois</nic>
+        <countryName>Serbia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains349" msdata:rowOrder="348">
+        <countryCode>rs</countryCode>
+        <domainName>in.rs</domainName>
+        <count>0</count>
+        <nic>http://www.rnids.rs/whois</nic>
+        <countryName>Serbia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains350" msdata:rowOrder="349">
+        <countryCode>rs</countryCode>
+        <domainName>edu.rs</domainName>
+        <count>0</count>
+        <nic>http://www.rnids.rs/whois</nic>
+        <countryName>Serbia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains351" msdata:rowOrder="350">
+        <countryCode>mk</countryCode>
+        <domainName>mk</domainName>
+        <count>0</count>
+        <nic />
+        <countryName>Macedonia</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList>com.mk, 
+org.mk, 
+net.mk, 
+edu.mk, 
+gov.mk, 
+inf.mk, 
+biz.mk, 
+mob.mk, </subDomainList>
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains352" msdata:rowOrder="351">
+        <countryCode />
+        <domainName>website</domainName>
+        <count>0</count>
+        <nic />
+        <countryName />
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+      <topLevelDomains diffgr:id="topLevelDomains353" msdata:rowOrder="352">
+        <countryCode>eu</countryCode>
+        <domainName>.eu</domainName>
+        <count>0</count>
+        <nic>http://www.eurid.eu/</nic>
+        <countryName>European Union</countryName>
+        <doPreload>true</doPreload>
+        <subDomainList />
+      </topLevelDomains>
+    </DocumentElement>
+  </diffgr:diffgram>
+</DataTable>

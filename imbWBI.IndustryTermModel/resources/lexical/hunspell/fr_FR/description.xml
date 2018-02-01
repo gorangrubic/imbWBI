@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ GNU GENERAL PUBLIC LICENSE V3.0
+ Copyright (C) 2018 imbVeles - http://blog.veles.rs/
+ Goran Grubić - Email: hardy@veles.rs - http://orcid.org/0000-0003-2673-9471
+ http://github.com/gorangrubic - http://www.mendeley.com/profiles/goran-grubi2/
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+-->
+<description xmlns="http://openoffice.org/extensions/description/2006" xmlns:d="http://openoffice.org/extensions/description/2006"  xmlns:xlink="http://www.w3.org/1999/xlink">
+    <version value="6.0.3" />
+    <identifier value="French.linguistic.resources.from.Dicollecte.by.OlivierR" />
+    <display-name>
+        <name lang="en-US">French spelling dictionary, hyphenation rules, and thesaurus</name>
+    </display-name>
+    <platform value="all" />
+    <dependencies>
+        <OpenOffice.org-minimal-version value="3.2" d:name="OpenOffice.org 3.2" />
+    </dependencies>
+    <icon>
+        <default xlink:href="icon.png" />
+    </icon>
+    <publisher>
+        <name xlink:href="http://www.dicollecte.org/" lang="fr">Dicollecte</name>
+    </publisher>
+</description>

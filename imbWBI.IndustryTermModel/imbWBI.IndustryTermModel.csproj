@@ -1,0 +1,2425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A919149C-5E3F-468D-BF8A-5935FCA586A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>imbWBI.IndustryTermModel</RootNamespace>
+    <AssemblyName>imbWBI.IndustryTermModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+    <DocumentationFile>bin\Debug\imbWBI.IndustryTermModel.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\imbWBI_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\imbWBI_Release\imbWBI.IndustryTermModel.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>imbWBI.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.3.8.0\lib\net40\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\net40\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math.Core, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Math.3.8.0\lib\net40\Accord.Math.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics, Version=3.8.0.0, Culture=neutral, PublicKeyToken=fa1a88e29555ccf7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Accord.Statistics.3.8.0\lib\net40\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bdev.Net.Dns, Version=1.0.4.0, Culture=neutral, PublicKeyToken=217d47f649bccd2c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bdev.Net.Dns.1.0.4\lib\Bdev.Net.Dns.dll</HintPath>
+    </Reference>
+    <Reference Include="BrightstarDB, Version=1.13.3.0, Culture=neutral, PublicKeyToken=e08b12254e74c9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\BrightstarDBLibs.1.13.3\lib\net40\BrightstarDB.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.2.16.3.0\lib\net40\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="dotNetRDF, Version=1.0.9.3683, Culture=neutral, PublicKeyToken=6055ffe4c97cc780, processorArchitecture=MSIL">
+      <HintPath>..\packages\dotNetRDF.1.0.9.3683\lib\net40\dotNetRDF.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.6.5.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.5\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="imbACE.Core, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbACE.0.1.2.11\lib\net40\imbACE.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="imbACE.Network, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbACE.0.1.2.11\lib\net40\imbACE.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="imbACE.Services, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbACE.0.1.2.11\lib\net40\imbACE.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="imbCommonModels, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbWEM.CommonData.0.1.2.16\lib\net40\imbCommonModels.dll</HintPath>
+    </Reference>
+    <Reference Include="imbMiningContext, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbWEM.CommonData.0.1.2.16\lib\net40\imbMiningContext.dll</HintPath>
+    </Reference>
+    <Reference Include="imbNLP.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbNLP.CoreAndData.NuGet1.0.1.2.8\lib\net40\imbNLP.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="imbNLP.Data, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbNLP.CoreAndData.NuGet1.0.1.2.8\lib\net40\imbNLP.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="imbNLP.Transliteration, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbNLP.Transliteration.0.1.2.1\lib\net40\imbNLP.Transliteration.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.Core, Version=0.1.6606.9348, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.0.1.2.27\lib\net40\imbSCI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.Data, Version=0.1.6603.21536, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.0.1.2.27\lib\net40\imbSCI.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.DataComplex, Version=0.1.6606.9349, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.0.1.2.27\lib\net40\imbSCI.DataComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.Graph, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.Graph.0.1.0.7\lib\net40\imbSCI.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="imbSCI.Reporting, Version=0.1.6606.9350, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbSCI.0.1.2.27\lib\net40\imbSCI.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="imbWEM.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbWEM.Core.0.1.2.7\lib\net40\imbWEM.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="imbWEM.Mining, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\imbWEM.Core.0.1.2.7\lib\net40\imbWEM.Mining.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqStatistics, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqStatistics.2.1.0\lib\net40\LinqStatistics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.20.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.20.2\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Spatial, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Spatial.0.4.0\lib\net40\MathNet.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.10\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHunspell, Version=1.2.5554.16953, Culture=neutral, PublicKeyToken=1ac793ea843b4366, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHunspell.1.2.5554.16953\lib\net\NHunspell.dll</HintPath>
+    </Reference>
+    <Reference Include="PGK.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f93e897f802ddcb7, processorArchitecture=MSIL">
+      <HintPath>..\packages\PGK.Extensions.2011.6\lib\PGK.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=1.13.122.1, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\BrightstarDBLibs.1.13.3\lib\net40\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VDS.Common, Version=1.6.0.0, Culture=neutral, PublicKeyToken=ab5f4eb908061bf0, processorArchitecture=MSIL">
+      <HintPath>..\packages\VDS.Common.1.6.0\lib\net40-client\VDS.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="consolePlugin\itmPlugin.cs" />
+    <Compile Include="industry\industryClassModel.cs" />
+    <Compile Include="industry\industryTermModelCrawlSetup.cs" />
+    <Compile Include="industry\industryTermModelProject.cs" />
+    <Compile Include="MyEntityContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyEntityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Hunspellx64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Hunspellx86.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="MyEntityContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MyEntityContext.cs</LastGenOutput>
+    </Content>
+    <Content Include="resources\datapoints\countries\countries.xml" />
+    <Content Include="resources\lexical\apertium_hbs\modes.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\af_ZA\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\af_ZA\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\af_ZA\README_af_ZA.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\an_ES\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\an_ES\LICENSES-en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\an_ES\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\ar\AUTHORS.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ar\COPYING.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ar\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ar\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\ar\README_ar.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\bg_BG\README_hyph_bg_BG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\README_th_bg_BG_v2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bs_BA\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bs_BA\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\bs_BA\README.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\images\SC-logo.png" />
+    <Content Include="resources\lexical\hunspell\ca\LICENSES-en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\LLICENCIES-ca.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\ca\package-description.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\README_ca.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\README_hyph_ca.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\README_thes_ca.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\description.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\cs_CZ\README_cs.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\README_en.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\thesaurus\blacklist.txt" />
+    <Content Include="resources\lexical\hunspell\cs_CZ\thesaurus\en-cs.txt" />
+    <Content Include="resources\lexical\hunspell\cs_CZ\thesaurus\README.txt" />
+    <Content Include="resources\lexical\hunspell\da_DK\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\desc_da_DK.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\desc_en_US.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\help\da\org.openoffice.da.hunspell.dictionaries\Trold.png" />
+    <Content Include="resources\lexical\hunspell\da_DK\HYPH_da_DK_README.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\da_DK\README_da_DK.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\README_th_da_DK.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\README_th_en-US.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\th_desc_da_DK.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\th_desc_en_US.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\Trold_42x42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\COPYING_LGPL_v2.0.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\COPYING_LGPL_v2.1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\COPYING_OASIS.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\de\README_de_DE_frami.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\README_extension_owner.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\README_hyph_de.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\README_thesaurus.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\el_GR\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\el_GR\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\el_GR\README_el_GR.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\el_GR\README_hyph_el_GR.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\affDescription.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\English.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\en\README.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_en_AU.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_en_CA.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_en_GB.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_en_GB_thes.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_en_US.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_en_ZA.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_hyph_en_GB.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_hyph_en_US.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\README_lightproof_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\WordNet_license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\description.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\es\package-description.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\README_es_ANY.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\README_hyph_es_ANY.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\README_th_es_ANY.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\et_EE\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\et_EE\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\et_EE\README_et_EE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\et_EE\README_hyph_et_EE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\description.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\fr_FR\package-description.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\README_fr.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\README_hyph_fr.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\README_thes_fr.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gd_GB\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gd_GB\LICENSES-en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gd_GB\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\gd_GB\README_gd_GB.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\Changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\GPLv3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\gl\package-description.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\ProxectoTrasno.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\README_hyph-gl.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\README_th_gl.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gug\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gug\description\desc_en_US.txt" />
+    <Content Include="resources\lexical\hunspell\gug\description\desc_es_ES.txt" />
+    <Content Include="resources\lexical\hunspell\gug\description\desc_gug_PY.txt" />
+    <Content Include="resources\lexical\hunspell\gug\images\gug-PY.png" />
+    <Content Include="resources\lexical\hunspell\gug\images\OdprtiTezaver.png" />
+    <Content Include="resources\lexical\hunspell\gug\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\gug\README_th_gug_PY.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gu_IN\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gu_IN\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\gu_IN\README_gu_IN.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\he_IL\alphabet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\he_IL\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\he_IL\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\he_IL\README_he_IL.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hi_IN\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hi_IN\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\hi_IN\README_hi_IN.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hr_HR\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hr_HR\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\hr_HR\README_hr_HR.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hr_HR\README_hyph_hr_HR.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\description.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\help\hu\org.openoffice.hu.hunspell.dictionaries\fsfhu.png" />
+    <Content Include="resources\lexical\hunspell\hu_HU\help\hu\org.openoffice.hu.hunspell.dictionaries\szinonima.png" />
+    <Content Include="resources\lexical\hunspell\hu_HU\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\hu_HU\README_hu_HU.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\README_hyph_hu_HU.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\README_lightproof_hu_HU.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\README_th_hu_HU_v2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\is\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\is\license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\is\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\it_IT\CHANGELOG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\it_IT\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\it_IT_license.txt" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\it_IT_notes.txt" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\it_IT_README.txt" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\it_IT_todo.txt" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\thes_gpl.txt" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_copyright_licenza.txt" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_lettera_in_inglese.txt" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_Lingua.png" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_Linguistica-Modifica.png" />
+    <Content Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_sinonimi.jpg" />
+    <Content Include="resources\lexical\hunspell\it_IT\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\it_IT\README_hyph_it_IT.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\it_IT\README_it_IT.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\it_IT\README_th_it_IT.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\ferheng.org.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\gpl-3.0.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\lgpl-2.1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\kmr_Latn\MPL-1.1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\README_kmr_Latn.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lo_LA\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lo_LA\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\lo_LA\README_lo_LA.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\lv_LV\Changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\lv_LV\README_hyph_lv_LV.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\README_lv_LV.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\README_th_lv_LV_v2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ne_NP\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ne_NP\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\ne_NP\README_ne_NP.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ne_NP\README_th_ne_NP_v2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\desc_en_US.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\desc_nl_NL.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\license_en_EN.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\licentie_nl_NL.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\nl_NL\OpenTaal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\README_NL.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\no\README_hyph_NO.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\oc_FR\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\oc_FR\LICENCES-fr.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\oc_FR\LICENSES-en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\oc_FR\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\oc_FR\README_oc_FR.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\pl_PL\README_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\README_pl.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\icons\VERO-logo.png" />
+    <Content Include="resources\lexical\hunspell\pt_BR\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\pt_BR\package-description.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\README_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\README_hyph_pt_BR.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\README_Lightproof_pt_BR.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\README_pt_BR.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\LICENSES.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\pt_PT\README_hyph_pt_PT.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\README_pt_PT.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\README_th_pt_PT_v2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\ro\README_EN.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\README_RO.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\ru_RU\README_Lightproof_ru_RU.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\README_ru_RU.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\README_thes_ru_RU.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\si_LK\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\si_LK\LICENSES-en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\si_LK\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\sk_SK\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\sk_SK\README_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\README_sk.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\README_th_sk_SK_v2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\release_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\release_sk.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\description.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\sl_SI\README_hyph_sl_SI.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\README_sl_SI.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\README_th_sl_SI.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sq_AL\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sq_AL\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\sq_AL\README.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\sr\README.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\description.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\LICENSE_en_US.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\LICENSE_sv_SE.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\sv_SE\README_hyph_sv.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\README_th_sv_SE.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sw_TZ\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sw_TZ\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\sw_TZ\README_sw_TZ.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\te_IN\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\te_IN\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\te_IN\README_hyph_te_IN.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\te_IN\README_te_IN.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\th_TH\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\th_TH\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\th_TH\README_th_TH.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\uk_UA\README_hyph_uk_UA.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\README_th_uk_UA.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\README_uk_UA.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\vi\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\vi\LICENSES-en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\vi\LICENSES-vi.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\vi\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\hunspell\zu_ZA\description.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\zu_ZA\META-INF\manifest.xml" />
+    <Content Include="resources\lexical\multext\srLex_v1.2_BibTex.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\multext\srLex_v1.2_Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\multext\srLex_v1.2_sample.txt" />
+    <Content Include="resources\lexical\unitex\srlat\Alphabet.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Alphabet_sort.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Corpus\Kandid63-UnicodeLE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\latDelacf-NepromU.inf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\latDelacf-SrpskiU.inf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\latdelaf-SrpskiU.inf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\elag.lst">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\tagset.def">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\Equivalences.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\Morphology.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\log_svn_Serbian-Latin.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Norm.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\system_dic.def">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\system_dic_list.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\sr\ReadMe.txt" />
+    <Content Include="resources\lexical\unitex\sr\unitex_delacf_sr.inf" />
+    <Content Include="resources\lexical\unitex\sr\unitex_delaf_sr.inf" />
+    <Content Include="resources\network\countryTable.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\network\topLevelDomains.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\network\whoIsServerTable.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\transliteration\readme.txt" />
+    <Content Include="resources\transliteration\sr.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\transliteration\sr_cor.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\wbi\itm\mc_repo_script.ace">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="imbWBI.IndustryTermModel.licenseheader" />
+    <None Include="packages.config" />
+    <Content Include="resources\entities\languages_iso639_sorted.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\entities\rs_zip_and_towns.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\datapoints\countries\countries-unescaped.json" />
+    <None Include="resources\datapoints\countries\countries.csv" />
+    <None Include="resources\datapoints\countries\countries.json" />
+    <None Include="resources\datapoints\countries\countries.yml" />
+    <None Include="resources\datapoints\countries\README.md" />
+    <Content Include="resources\lexical\apertium_hbs\aclocal.m4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng-hbs.rlx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng-hbs.t1x">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng-hbs.t2x">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng-hbs.t3x">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng-hbs_BS.lrx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng-hbs_HR.lrx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng-hbs_SR.lrx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng.acx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.eng.dix">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.hbs-eng.dix">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.hbs-eng.lrx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.hbs-eng.t1x">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.hbs-eng.t2x">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.hbs-eng.t3x">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\apertium-hbs-eng.post-eng.dix">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\AUTHORS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\ChangeLog">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\configure">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\configure.ac">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\COPYING">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\eng-hbs.prob">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\hbs-eng.prob">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\INSTALL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\install-sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\Makefile.am">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\Makefile.in">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\missing">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\NEWS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\apertium_hbs\README">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspel_list.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\af_ZA\af_ZA.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\af_ZA\af_ZA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\af_ZA\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\af_ZA\hyph_af_ZA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\an_ES\an_ES.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\an_ES\an_ES.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\an_ES\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ar\ar.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ar\ar.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ar\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ar\th_ar.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\bg_BG.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\bg_BG.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\COPYING">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\hyph_bg_BG.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bg_BG\th_bg_BG_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bs_BA\bs_BA.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bs_BA\bs_BA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\bs_BA\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\dictionaries\ca-valencia.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\dictionaries\ca-valencia.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\dictionaries\ca.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\dictionaries\ca.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\dictionaries\hyph_ca.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\dictionaries\th_ca_ES_v3.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ca\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\cs_CZ.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\cs_CZ.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\dictionaries.xcu">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\hyph_cs_CZ.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\cs_CZ\thes_cs_CZ.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\definitions\sr_properform_one.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\definitions\sr_properform_tagger.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\entities\Copy of klasifikacija KD08 puni nazivi.xlsx" />
+    <None Include="resources\entities\imena.xlsx" />
+    <None Include="resources\entities\NACE Rev_ 2 table format2.xlsx" />
+    <None Include="resources\entities\naselja.xlsx" />
+    <None Include="resources\entities\prezimena.xlsx" />
+    <None Include="resources\entities\serbian_country_name_and_code_list.xlsx" />
+    <None Include="resources\lexical\hunspell\cs_CZ\thesaurus\dictionary-to-thesaurus.py" />
+    <Content Include="resources\lexical\hunspell\da_DK\da_DK.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\da_DK.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\da_DK\help\da\help.tree" />
+    <None Include="resources\lexical\hunspell\da_DK\help\da\org.openoffice.da.hunspell.dictionaries\page1.xhp" />
+    <None Include="resources\lexical\hunspell\da_DK\help\da\org.openoffice.da.hunspell.dictionaries\page2.xhp" />
+    <None Include="resources\lexical\hunspell\da_DK\help\en\help.tree" />
+    <Content Include="resources\lexical\hunspell\da_DK\hyph_da_DK.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\da_DK\th_da_DK.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\COPYING_GPLv2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\COPYING_GPLv3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\de_AT_frami.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\de_AT_frami.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\de_CH_frami.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\de_CH_frami.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\de_DE_frami.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\de_DE_frami.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\hyph_de_AT.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\hyph_de_CH.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\hyph_de_DE.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\th_de_CH_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\de\th_de_DE_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\el_GR\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\el_GR\el_GR.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\el_GR\el_GR.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\el_GR\hyph_el_GR.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\en\dialog\en.xdl" />
+    <None Include="resources\lexical\hunspell\en\dialog\en_en_US.default" />
+    <None Include="resources\lexical\hunspell\en\dialog\en_en_US.properties" />
+    <None Include="resources\lexical\hunspell\en\dialog\registry\data\org\openoffice\Office\OptionsDialog.xcu" />
+    <None Include="resources\lexical\hunspell\en\dialog\registry\schema\org\openoffice\Lightproof_en.xcs" />
+    <Content Include="resources\lexical\hunspell\en\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_AU.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_AU.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_CA.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_CA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_GB.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_GB.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_US.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_US.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_ZA.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\en_ZA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\hyph_en_GB.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\hyph_en_US.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\Lightproof.components">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\Lightproof.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\en\Linguistic.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\en\pythonpath\lightproof_en.py" />
+    <None Include="resources\lexical\hunspell\en\pythonpath\lightproof_handler_en.py" />
+    <None Include="resources\lexical\hunspell\en\pythonpath\lightproof_impl_en.py" />
+    <None Include="resources\lexical\hunspell\en\pythonpath\lightproof_opts_en.py" />
+    <Content Include="resources\lexical\hunspell\en\th_en_US_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\dictionaries.xcu">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\es_ANY.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\es_ANY.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\hyph_es_ANY.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\th_es_ANY_v2.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\es\th_es_ANY_v2.idx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\et_EE\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\et_EE\eehyph.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\et_EE\et_EE.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\et_EE\et_EE.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\et_EE\hyph_et_EE.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\dictionaries.xcu">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\fr.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\fr.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\hyph-fr.tex">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\hyph_fr.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\fr_FR\thes_fr.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gd_GB\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gd_GB\gd_GB.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gd_GB\gd_GB.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\COPYING_th_gl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\gl_ES.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\gl_ES.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\hyph_gl.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\README">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gl\thesaurus_gl.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gu_IN\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gu_IN\gu_IN.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gu_IN\gu_IN.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gug\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gug\gug.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gug\gug.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gug\th_gug_PY.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\gug\th_gug_PY.idx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\he_IL\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\he_IL\he_IL.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\he_IL\he_IL.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hi_IN\COPYING">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hi_IN\Copyright">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hi_IN\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hi_IN\hi_IN.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hi_IN\hi_IN.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hr_HR\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hr_HR\hr_HR.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hr_HR\hr_HR.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hr_HR\hyph_hr_HR.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\hu_HU\dialog\hu_HU.xdl" />
+    <None Include="resources\lexical\hunspell\hu_HU\dialog\hu_HU_en_US.default" />
+    <None Include="resources\lexical\hunspell\hu_HU\dialog\hu_HU_en_US.properties" />
+    <None Include="resources\lexical\hunspell\hu_HU\dialog\hu_HU_hu_HU.properties" />
+    <None Include="resources\lexical\hunspell\hu_HU\dialog\registry\data\org\openoffice\Office\OptionsDialog.xcu" />
+    <None Include="resources\lexical\hunspell\hu_HU\dialog\registry\schema\org\openoffice\Lightproof_hu_HU.xcs" />
+    <Content Include="resources\lexical\hunspell\hu_HU\dictionaries.xcu">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\hu_HU\help\en\help.tree" />
+    <None Include="resources\lexical\hunspell\hu_HU\help\hu\help.tree" />
+    <None Include="resources\lexical\hunspell\hu_HU\help\hu\org.openoffice.hu.hunspell.dictionaries\page1.xhp" />
+    <Content Include="resources\lexical\hunspell\hu_HU\hu_HU.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\hu_HU.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\hyph_hu_HU.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\Lightproof.components">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\Lightproof.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\hu_HU\Linguistic.xcu">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\hu_HU\pythonpath\lightproof_handler_hu_HU.py" />
+    <None Include="resources\lexical\hunspell\hu_HU\pythonpath\lightproof_hu_HU.py" />
+    <None Include="resources\lexical\hunspell\hu_HU\pythonpath\lightproof_impl_hu_HU.py" />
+    <None Include="resources\lexical\hunspell\hu_HU\pythonpath\lightproof_opts_hu_HU.py" />
+    <Content Include="resources\lexical\hunspell\hu_HU\th_hu_HU_v2.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\is\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\is\hyph_is.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\is\is.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\is\is.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\is\th_is.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\it_IT\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\it_IT\hyph_it_IT.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\it_IT\it_IT.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\it_IT\it_IT.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\it_IT\legacy\it_IT_AUTHORS" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\it_IT_ChangeLog" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\it_IT_COPYING" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\it_IT_README.1st" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\it_IT_statistiche.ods" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_AUTHORS" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_ChangeLog" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_COPYING" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_INSTALL" />
+    <None Include="resources\lexical\hunspell\it_IT\legacy\th_it_IT_README" />
+    <Content Include="resources\lexical\hunspell\it_IT\th_it_IT_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\kmr_Latn.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\kmr_Latn\kmr_Latn.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lo_LA\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lo_LA\lo_LA.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lo_LA\lo_LA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\AUTHORS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\COPYING">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\hyph_lt.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\lt.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\lt.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\README">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lt_LT\README_hyph">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\hyph_lv_LV.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\lv_LV.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\lv_LV.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\lv_LV\th_lv_LV_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ne_NP\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ne_NP\ne_NP.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ne_NP\ne_NP.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ne_NP\th_ne_NP_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\hyph_nl_NL.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\nl_NL.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\nl_NL\nl_NL.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\COPYING">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\hyph_nb_NO.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\hyph_nn_NO.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\nb_NO.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\nb_NO.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\nn_NO.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\nn_NO.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\th_nb_NO_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\no\th_nn_NO_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\oc_FR\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\oc_FR\oc_FR.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\oc_FR\oc_FR.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\hyph_pl_PL.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\pl_PL.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\pl_PL.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\plhyph.tex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pl_PL\th_pl_PL_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\pt_BR\dialog\OptionsDialog.xcs" />
+    <None Include="resources\lexical\hunspell\pt_BR\dialog\OptionsDialog.xcu" />
+    <None Include="resources\lexical\hunspell\pt_BR\dialog\pt_BR.xdl" />
+    <None Include="resources\lexical\hunspell\pt_BR\dialog\pt_BR_pt_BR.default" />
+    <None Include="resources\lexical\hunspell\pt_BR\dialog\pt_BR_pt_BR.properties" />
+    <None Include="resources\lexical\hunspell\pt_BR\dialog\registry\data\org\openoffice\Office\OptionsDialog.xcu" />
+    <None Include="resources\lexical\hunspell\pt_BR\dialog\registry\schema\org\openoffice\Lightproof_pt_BR.xcs" />
+    <Content Include="resources\lexical\hunspell\pt_BR\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\hyph_pt_BR.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\Lightproof.components">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\Lightproof.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\Linguistic.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\pt_BR.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_BR\pt_BR.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\pt_BR\pythonpath\lightproof_handler_pt_BR.py" />
+    <None Include="resources\lexical\hunspell\pt_BR\pythonpath\lightproof_impl_pt_BR.py" />
+    <None Include="resources\lexical\hunspell\pt_BR\pythonpath\lightproof_opts_pt_BR.py" />
+    <None Include="resources\lexical\hunspell\pt_BR\pythonpath\lightproof_pt_BR.py" />
+    <Content Include="resources\lexical\hunspell\pt_PT\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\hyph_pt_PT.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\pt_PT.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\pt_PT.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\pt_PT\th_pt_PT_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\README">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\COPYING.GPL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\COPYING.LGPL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\COPYING.MPL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\hyph_ro_RO.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\ro_RO.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\ro_RO.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ro\th_ro_RO_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\ru_RU\dialog\registry\data\org\openoffice\Office\OptionsDialog.xcu" />
+    <None Include="resources\lexical\hunspell\ru_RU\dialog\registry\schema\org\openoffice\Lightproof_ru_RU.xcs" />
+    <None Include="resources\lexical\hunspell\ru_RU\dialog\ru_RU.xdl" />
+    <None Include="resources\lexical\hunspell\ru_RU\dialog\ru_RU_en_US.default" />
+    <None Include="resources\lexical\hunspell\ru_RU\dialog\ru_RU_en_US.properties" />
+    <None Include="resources\lexical\hunspell\ru_RU\dialog\ru_RU_ru_RU.properties" />
+    <Content Include="resources\lexical\hunspell\ru_RU\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\hyph_ru_RU.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\Lightproof.components">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\Lightproof.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\Linguistic.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\hunspell\ru_RU\pythonpath\lightproof_handler_ru_RU.py" />
+    <None Include="resources\lexical\hunspell\ru_RU\pythonpath\lightproof_impl_ru_RU.py" />
+    <None Include="resources\lexical\hunspell\ru_RU\pythonpath\lightproof_opts_ru_RU.py" />
+    <None Include="resources\lexical\hunspell\ru_RU\pythonpath\lightproof_ru_RU.py" />
+    <Content Include="resources\lexical\hunspell\ru_RU\ru_RU.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\ru_RU.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\ru_RU\th_ru_RU_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\si_LK\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\si_LK\si_LK.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\si_LK\si_LK.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\hyph_sk_SK.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\sk_SK.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\sk_SK.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sk_SK\th_sk_SK_v2.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\dictionaries.xcu">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\hyph_sl_SI.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\sl_SI.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\sl_SI.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sl_SI\th_sl_SI_v2.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sq_AL\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sq_AL\sq_AL.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sq_AL\sq_AL.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\hyph_sr-Latn.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\hyph_sr.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\sr-Latn.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\sr-Latn.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\sr.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sr\sr.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\dictionaries.xcu">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\hyph_sv.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\sv_FI.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\sv_FI.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\sv_SE.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\sv_SE.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sv_SE\th_sv_SE.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sw_TZ\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sw_TZ\sw_TZ.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\sw_TZ\sw_TZ.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\te_IN\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\te_IN\hyph_te_IN.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\te_IN\te_IN.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\te_IN\te_IN.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\th_TH\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\th_TH\th_TH.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\th_TH\th_TH.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\hyph_uk_UA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\th_uk_UA.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\uk_UA.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\uk_UA\uk_UA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\vi\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\vi\vi_VN.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\vi\vi_VN.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\zu_ZA\dictionaries.xcu">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\hunspell\zu_ZA\hyph_zu_ZA.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\multext\sr_multitext_conversion.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\multext\sr_multitext_to_imb.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\multext\srLex_v1.2.mtx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\sr\unitex_delacf.dic" />
+    <Content Include="resources\lexical\unitex\sr\unitex_delaf.dic" />
+    <Content Include="resources\lexical\unitex\sr\unitex_delaf_immutable.dic" />
+    <Content Include="resources\lexical\unitex\srlat\Dela\latDelacf-NepromU.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\latDelacf-SrpskiU.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\latdelaf-SrpskiU.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\NewBrojSlovima.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\NewBrojSlovima_norm-z.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\sample-dlc.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Dela\sample-dlcf.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\elag.rul">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\elag.rul-0.elg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\hteti-V-conc.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\hteti-V.elg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\hteti-V.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\hteti-V.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\interj-conc.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\interj.elg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\interj.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\interj.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\mitiPRO-Eric-conc.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\mitiPRO-Eric.elg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\mitiPRO-Eric.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\mitiPRO-Eric.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\PREP-V-conc.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\PREP-V.elg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\PREP-V.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\PREP-V.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\tiPRO-1-conc.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\tiPRO-1.elg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\tiPRO-1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Elag\tiPRO-1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\unitex\srlat\Graphs\Normalization\elizije.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Normalization\Norm.fst2" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Normalization\Norm.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Replace\caracteres_speciaux.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Replace\elizije.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Replace\Replace.fst2" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Replace\Replace.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Replace\ReplaceTEI.fst2" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Replace\ReplaceTEI.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Replace\skracenice.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\matematika.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\NenN.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\NN.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Nombres.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\RN Hundred.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\RN Ten.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\RN Thousand.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\RN Unit.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\RN.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\RomanNumerals.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Sentence-dij.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Sentence-recepti.fst2" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Sentence-recepti.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Sentence-xml.fst2" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Sentence-xml.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Sentence.fst2" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Sentence.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Sentence1.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\SequenceTEI.fst2" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\SequenceTEI.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\skracenice-dij.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\skracenice.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\Valute.grf" />
+    <None Include="resources\lexical\unitex\srlat\Graphs\Preprocessing\Sentence\VelikoSlovo.grf" />
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA2.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA2.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA3.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA3.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA4.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_2XA4.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_A3XN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_A3XN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_A3XN2.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_A3XN2.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_AXA.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\AC_AXA.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XAXN.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XAXN.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XAXN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XAXN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN2.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN2.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN3.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN3.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN3XN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN3XN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN4.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN4.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN5.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN5.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN6.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN6.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN7.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_2XN7.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_4XN.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_4XN.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_4XN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_4XN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_4XNr.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_4XNr.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_A3XN.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_A3XN.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXAXN.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXAXN.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXAXN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXAXN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXAXNXN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXAXNXN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXAXNXN1m.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXAXNXN1m.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN2X1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN2X1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN2Xa.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN2Xa.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN3.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN3.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN3XN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXN3XN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXNF.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXNF.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXNr.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXNr.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXNXN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXNXN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXNXN1m.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_AXNXN1m.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_ImePrezime.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_ImePrezime.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N2X.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N2X.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N2X1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N2X1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N2X2.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N2X2.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N2X3.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N2X3.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N3XAXN.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N3XAXN.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N3XAXNt.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N3XAXNt.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N3XNa.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N3XNa.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N3XNt.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N3XNt.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4X.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4X.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4X1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4X1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4Xa.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4Xa.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4Xp.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4Xp.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4Xsp.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_N4Xsp.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NF4X.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NF4X.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXA3.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXA3.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXAXN1.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXAXN1.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN2.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN2.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN2m.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN2m.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN2X2m.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN2X2m.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN3.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXN3.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXNF.fst2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\Inflection\NC_NXNF.grf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lexical\unitex\srlat\ReadMe.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="resources\lexical\unitex\UnitexDoc.chm" />
+    <None Include="resources\lexical\unitex\UnitexManual.pdf" />
+    <None Include="resources\network\tld.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imbWBI.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\imbNLP\imbNLP.PartOfSpeech\imbNLP.PartOfSpeech.csproj">
+      <Project>{3f7d6e9b-9442-47db-ac2e-3bfe38e644d5}</Project>
+      <Name>imbNLP.PartOfSpeech</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\imbWBI.Core\imbWBI.Core.csproj">
+      <Project>{9a9228cb-af89-4fba-93b9-d9731fc8472a}</Project>
+      <Name>imbWBI.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pipeline\" />
+    <Folder Include="resources\lexical\unitex\srlat\CasSys\Share\" />
+    <Folder Include="resources\lexical\unitex\srlat\Disamb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,47 @@
+﻿Please download srLex_v1.2 from original source [the file is greater then GitHub limit]
+
+Source:
+https://www.clarin.si/repository/xmlui/handle/11356/1073
+
+Inflectional lexicon srLex 1.2
+
+
+Please use the following text to cite this item or export to a predefined format:
+Ljubešić, Nikola; Klubička, Filip and Boras, Damir, 2016, Inflectional lexicon srLex 1.2, Slovenian language resource repository CLARIN.SI, http://hdl.handle.net/11356/1073.
+
+Ljubešić, Nikola ; Klubička, Filip ; Boras, Damir
+
+ Project URL
+http://nlp.ffzg.hr/resources/lexicons/srlex/ ‎
+
+ Date issued
+2016-09-19
+
+ Type
+lexicalConceptualResource
+
+ Size
+6908043 items, 192590 entries
+
+ Language(s)
+Serbian
+
+ Description
+srLex is a large inflectional lexicon of Serbian language where each entry consists of a (wordform, lemma, MSD, frequency, per-million frequency) 5-tuple. The (wordform, lemma, MSD) triple frequencies are calculated on the srWaC v1.2 corpus. The MSD tagset follows the MULTEXT-East V5 tagset for Bosnian available at http://nl.ijs.si/ME/V5/msd/html/msd-bs.html.
+
+ Publisher
+Faculty of Humanities and Social Sciences, University of Zagreb
+
+ Acknowledgement
+European Union FP7-PEOPLE-2012-IAPP
+
+Project code: PIAP-GA-2012-324414
+
+Project name: Abu-MaTran
+
+ 
+Swiss National Science Foundation
+
+Project code: 160501
+
+Project name: ReLDI
